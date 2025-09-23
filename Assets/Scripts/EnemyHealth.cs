@@ -1,21 +1,57 @@
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class EnemyHealth : MonoBehaviour
 {
-    public float maxHP = 20f;
-    float currentHP;
+    [Header("Health")]
+    public float maxHealth = 10f;
+    private float currentHealth;
 
-    void Awake() => currentHP = maxHP;
+    [Header("Hit Flash")]
+    public Color flashColor = Color.white;
+    public float flashDuration = 0.1f;
+
+    [Header("Death")]
+    public GameObject deathEffectPrefab;
+
+    SpriteRenderer sr;
+    Color originalColor;
+
+    void Awake()
+    {
+        currentHealth = maxHealth;
+        sr = GetComponent<SpriteRenderer>();
+        originalColor = sr.color;
+    }
 
     public void TakeDamage(float dmg)
     {
-        currentHP -= dmg;
-        if (currentHP <= 0f) Die();
+        currentHealth -= dmg;
+        if (currentHealth <= 0f)
+        {
+            Die();
+            return;
+        }
+        StartCoroutine(Flash());
+    }
+
+    System.Collections.IEnumerator Flash()
+    {
+
+        sr.color = flashColor;
+        // turn invisible for a short duration
+        sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0f);
+
+        yield return new WaitForSeconds(flashDuration);
+        sr.color = originalColor;
     }
 
     void Die()
     {
-        // Play death FX, drop loot, etc.
+        if (deathEffectPrefab)
+        {
+            Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
 }

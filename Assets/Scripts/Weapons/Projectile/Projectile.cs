@@ -23,27 +23,7 @@ public class Projectile : MonoBehaviour
     public LayerMask enemyMask;
 
 
-    private void Awake()
-    {
-         
-        // make invisible initially if it's a bullet
-        if (type != ProjectileType.Bullet) return;
-
-        var sr = GetComponent<SpriteRenderer>();
-        
-
-            if (sr != null)
-        {
-            Color c = sr.color;
-            c.a = 0f;
-            sr.color = c;
-        }
-        // fade in
-        if (sr != null)
-        {
-            sr.DOFade(1f, .2f);
-        }
-    }
+    
     void Start()
     {
         if (type == ProjectileType.Bullet)
