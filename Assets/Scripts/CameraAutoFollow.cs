@@ -17,6 +17,8 @@ public class CameraAutoFollow : MonoBehaviour
 
     void Update()
     {
+         
+
         // If we already have a target, stop checking
         if (vcam.Follow != null) return;
 
