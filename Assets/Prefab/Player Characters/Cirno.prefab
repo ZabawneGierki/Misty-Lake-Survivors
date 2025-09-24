@@ -169,6 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3801353060017265192}
+  - component: {fileID: 2600719157126424740}
   m_Layer: 6
   m_Name: WeaponMount
   m_TagString: Untagged
@@ -192,6 +193,18 @@ Transform:
   - {fileID: 6135880475778018142}
   m_Father: {fileID: 4309439833734250535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2600719157126424740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7772234261105429786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc24bddd75b83a46b6b7b8bc57b5602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8468308980068752377
 GameObject:
   m_ObjectHideFlags: 0
