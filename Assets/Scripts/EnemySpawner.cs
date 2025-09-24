@@ -51,7 +51,8 @@ public class EnemySpawner : MonoBehaviour
         Vector2 dir = Random.insideUnitCircle.normalized;
         Vector2 spawnPos = (Vector2)player.position + dir * spawnRadius;
 
-        Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        enemy.transform.SetParent(this.transform);
     }
 
     int CountActiveEnemies()
