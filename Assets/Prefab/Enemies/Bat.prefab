@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4011269226813128326}
   - component: {fileID: 8437175722188478859}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3c39ca8a0247c149bd15887ec5e65ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 5
   flashColor: {r: 0.9622642, g: 0.75027645, b: 0.077162705, a: 1}
   flashDuration: 0.1
   deathEffectPrefab: {fileID: 5625975510390865483, guid: fd50e40dbd6c511469edb31874fe6b4b, type: 3}
