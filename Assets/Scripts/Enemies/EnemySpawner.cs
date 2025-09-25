@@ -53,6 +53,9 @@ public class ProgressiveSpawner : MonoBehaviour
 
         Vector2 dir = Random.insideUnitCircle.normalized;
         Vector2 spawnPos = (Vector2)player.position + dir * spawnRadius;
-        Instantiate(prefab, spawnPos, Quaternion.identity);
+        GameObject enemy = Instantiate(prefab, spawnPos, Quaternion.identity);
+        // make enemy child of spawner for organization
+        enemy.transform.parent = this.transform;
+
     }
 }
