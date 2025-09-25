@@ -7527,10 +7527,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 944518803e6ae074e928d1d2648399af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
-  spawnRadius: 15
-  spawnInterval: 2
-  maxEnemies: 50
+  waves:
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.4
+  - enemyPrefab: {fileID: 2192605085347405251, guid: b4eb127a1411bf74e9e0d37440dae058, type: 3}
+    amount: 20
+    interval: 0.31
+  spawnRadius: 10
 --- !u!1001 &56523674007860938
 PrefabInstance:
   m_ObjectHideFlags: 0
