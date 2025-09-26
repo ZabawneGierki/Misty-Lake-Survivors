@@ -45065,13 +45065,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 293235779385004644, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 293235779385004644, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
+      propertyPath: baseDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 293235779385004644, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
       propertyPath: baseCooldown
-      value: 1
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 293235779385004644, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
       propertyPath: iceShardPrefab
       value: 
       objectReference: {fileID: 1127109926}
+    - target: {fileID: 293235779385004644, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
+      propertyPath: baseProjectileSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4021770823272079164, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
       propertyPath: m_IsActive
       value: 0

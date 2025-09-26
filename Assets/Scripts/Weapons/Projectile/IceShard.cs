@@ -1,4 +1,5 @@
 using DG.Tweening.Core.Easing;
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
@@ -7,15 +8,21 @@ public class IceShard : MonoBehaviour
     public float speed;
     public float damage;
     public int pierceCount;
-
     public int maxBounces = 6;
+
+
 
     Rigidbody2D rb;
     int bounces = 0;
+    Animator animator;
 
     [HideInInspector] public Vector2 direction; // set from spawner/weapon
 
 
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     public void Init(Vector2 direction, float spd, float dmg, int pierces)
     {
         this.direction = direction;
@@ -34,7 +41,7 @@ public class IceShard : MonoBehaviour
             pierceCount--;
 
             if (pierceCount <= 0)
-                Destroy(gameObject);
+                StartCoroutine(PlayDestroyAnimation());
         }
         else if (col.CompareTag("ScreenEdge"))
         {
@@ -73,5 +80,13 @@ public class IceShard : MonoBehaviour
             // rotate sprite to face travel direction (optional)
             transform.right = reflected;
         }
+    }
+
+
+    private IEnumerator PlayDestroyAnimation()
+    {
+        animator.SetTrigger("Explode");
+        yield return new WaitForSeconds(0.3f); // wait for animation to finish
+        Destroy(gameObject);
     }
 }
