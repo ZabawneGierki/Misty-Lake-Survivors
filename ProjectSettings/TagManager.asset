@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Projectile
   - Enemy
+  - Wall
+  - ScreenEdge
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - Player
   - Enemy
   - PlayerProjectile
-  - 
+  - Walls
   - 
   - 
   - 
