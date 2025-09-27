@@ -9,4 +9,5 @@ public class WeaponData
     public GameObject weaponPrefab; 
     public Sprite weaponIcon;
     public string[] descriptionPerLevel;
+    public int level;
 }

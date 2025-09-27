@@ -472,16 +472,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c284b717e0e7ed4b9f3b8e0275806ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
-  baseCooldown: 1
-  baseDamage: 10
-  baseProjectileSpeed: 5
+  level: 2
+  baseCooldown: 0.22
+  baseDamage: 5
+  baseProjectileSpeed: 20
   baseSize: 1
   cooldownMultiplier: 1
   damageMultiplier: 1
   speedMultiplier: 1
   sizeMultiplier: 1
-  iceShardPrefab: {fileID: 0}
+  iceShardPrefab: {fileID: 5550314156063751637, guid: 105add554d01a1e40a99951f4ac60ee6, type: 3}
   shardSpeed: 6
 --- !u!1 &7772234261105429786
 GameObject:
@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 6011313808109072253}
   - component: {fileID: 6763735644705737734}
   - component: {fileID: 8840819204837282899}
+  - component: {fileID: 277356965196214275}
   m_Layer: 6
   m_Name: Cirno
   m_TagString: Player
@@ -659,3 +660,18 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 2632190866709862166}
+--- !u!114 &277356965196214275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8468308980068752377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b766589868a1d9d40bc663274c8f1cb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  currentXP: 0
+  xpToNextLevel: 75
