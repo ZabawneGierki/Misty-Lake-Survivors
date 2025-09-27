@@ -9,7 +9,7 @@ public class PlayerLevel : MonoBehaviour
     public int xpToNextLevel = 10;
 
     [Header("Events")]
-    public static UnityEvent<int> OnLevelUp; // sends new level to listeners
+    public  UnityEvent<int> OnLevelUp; // sends new level to listeners
 
     public void AddXP(int amount)
     {
