@@ -181,60 +181,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &4021770823272079164
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6135880475778018142}
-  - component: {fileID: 4142339433830101928}
-  m_Layer: 6
-  m_Name: Ofuda
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6135880475778018142
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4021770823272079164}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3801353060017265192}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4142339433830101928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4021770823272079164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891bf905b6dd6c24cac8313af3028103, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: 6
-  baseCooldown: 1
-  baseDamage: 10
-  baseProjectileSpeed: 15
-  baseSize: 1
-  cooldownMultiplier: 1
-  damageMultiplier: 1
-  speedMultiplier: 1
-  sizeMultiplier: 1
-  cardPrefab: {fileID: 3161884364949377758, guid: 574403aee10c22740a481f5bfbbc582f, type: 3}
 --- !u!1 &5505446443588115512
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,61 +374,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 8823294955268484223}
   offset: {x: 0, y: 1.5, z: 0}
---- !u!1 &7040447264717837094
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5219499942878031427}
-  - component: {fileID: 293235779385004644}
-  m_Layer: 6
-  m_Name: CirnoShard
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5219499942878031427
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7040447264717837094}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3801353060017265192}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &293235779385004644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7040447264717837094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c284b717e0e7ed4b9f3b8e0275806ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: 2
-  baseCooldown: 0.22
-  baseDamage: 5
-  baseProjectileSpeed: 20
-  baseSize: 1
-  cooldownMultiplier: 1
-  damageMultiplier: 1
-  speedMultiplier: 1
-  sizeMultiplier: 1
-  iceShardPrefab: {fileID: 5550314156063751637, guid: 105add554d01a1e40a99951f4ac60ee6, type: 3}
-  shardSpeed: 6
 --- !u!1 &7772234261105429786
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +404,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6135880475778018142}
   - {fileID: 5219499942878031427}
   m_Father: {fileID: 4309439833734250535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -543,6 +433,7 @@ GameObject:
   - component: {fileID: 6763735644705737734}
   - component: {fileID: 8840819204837282899}
   - component: {fileID: 277356965196214275}
+  - component: {fileID: 7826264479207706786}
   m_Layer: 6
   m_Name: Cirno
   m_TagString: Player
@@ -674,4 +565,97 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   currentXP: 0
-  xpToNextLevel: 75
+  xpToNextLevel: 10
+  OnLevelUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelUpUI, Assembly-CSharp
+        m_MethodName: ShowChoices
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7826264479207706786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8468308980068752377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5084be3d78a6d08438d857d89ab1f503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxWeapons: 5
+  maxPowerUps: 5
+  weapons: []
+  powerUps: []
+--- !u!1001 &5628574764261548096
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3801353060017265192}
+    m_Modifications:
+    - target: {fileID: 464949822624042499, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464949822624042499, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464949822624042499, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464949822624042499, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 464949822624042499, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464949822624042499, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464949822624042499, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464949822624042499, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464949822624042499, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464949822624042499, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434003037216650086, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
+      propertyPath: m_Name
+      value: CirnoShard
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
+--- !u!4 &5219499942878031427 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 464949822624042499, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
+  m_PrefabInstance: {fileID: 5628574764261548096}
+  m_PrefabAsset: {fileID: 0}
