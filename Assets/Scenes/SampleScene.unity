@@ -40654,10 +40654,8 @@ MonoBehaviour:
   choiceButtonPrefab: {fileID: 475343287864991101, guid: 08e277f65815e1f4f9e76e2bbaf3a75e, type: 3}
   allWeapons:
   - {fileID: 11400000, guid: 03a96674dd87cc94db0ca9f84c397fbb, type: 2}
-  - {fileID: 11400000, guid: 7160ec63fd030fa42ba1b15bcb6d4722, type: 2}
-  - {fileID: 11400000, guid: 2441858164da49f4a86648156bde0c46, type: 2}
-  allPowerUps:
-  - {fileID: 11400000, guid: 7456c54e91e1fbd4fa930745eb1804a0, type: 2}
+  - {fileID: 11400000, guid: a0075d381ee23e0478141cd6acb8c76e, type: 2}
+  allPowerUps: []
 --- !u!1 &709453853
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3e9b2d2e0635c4eaa137b98918250c, type: 3}
   m_Name: DummyOfuda
   m_EditorClassIdentifier: 
-  weaponName: 
-  icon: {fileID: 0}
-  description: 
-  weaponPrefab: {fileID: 0}
+  weaponName: dumy ofuda
+  icon: {fileID: -1976196117, guid: cc10b3c450f888e498c30938adb4aae2, type: 3}
+  description: test
+  weaponPrefab: {fileID: 7017431717939419583, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
   maxLevel: 5
