@@ -4,7 +4,7 @@ using UnityEngine;
 public class WeaponSizeBoost : PowerUpEffect
 {
     [Tooltip("Extra size per level, e.g. 0.1 = +10%")]
-    public float sizeBonusPerLevel = 0.1f;
+    public float sizeBonusPerLevel = 20f;
 
     public override void Apply(PlayerInventory inventory, int newLevel)
     {
@@ -18,7 +18,7 @@ public class WeaponSizeBoost : PowerUpEffect
             {
                 var baseScript = w.instance.GetComponent<WeaponBase>();
                 if (baseScript != null)
-                    baseScript.sizeMultiplier = multiplier;
+                    baseScript.speedMultiplier = multiplier;
                 else 
                     Debug.LogWarning($"Weapon {w.data.weaponName} does not have a WeaponBase component.");
             }
