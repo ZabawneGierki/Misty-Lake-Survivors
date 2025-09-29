@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8f3e3441b5cc84c940e4d1a5e68190, type: 3}
   m_Name: WeaponSizeBoost
   m_EditorClassIdentifier: 
-  powerName: 
-  icon: {fileID: 0}
-  description: 
+  powerName: PowerUP
+  icon: {fileID: 21300000, guid: 5d322221ceeda3c4394a7e28f06c87ae, type: 3}
+  description: increazes the size of the weapons
   maxLevel: 5
   sizeBonusPerLevel: 0.1

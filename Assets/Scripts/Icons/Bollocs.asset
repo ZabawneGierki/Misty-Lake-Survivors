@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c5244c377108847ba33fc48fe5f5ba, type: 3}
   m_Name: Bollocs
   m_EditorClassIdentifier: 
-  powerName: 
-  icon: {fileID: 0}
-  description: 
+  powerName: Ray Bibbia
+  icon: {fileID: 21992815, guid: 8f6f5068201c04b438a232ed0ab715da, type: 3}
+  description: habibia
   maxLevel: 5

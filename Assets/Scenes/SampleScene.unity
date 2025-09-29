@@ -40203,7 +40203,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.33, y: 0.63, z: -10}
+  m_LocalPosition: {x: -1.2, y: 0.23, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -40436,7 +40436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 20.049988}
+  m_AnchoredPosition: {x: 0, y: 20.050049}
   m_SizeDelta: {x: -413.4, y: -115.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578407210
@@ -40596,7 +40596,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -113, y: 8}
+  m_AnchoredPosition: {x: 81, y: -21}
   m_SizeDelta: {x: -1013.42, y: -429.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &682163163
@@ -40606,7 +40606,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682163161}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -40655,7 +40655,8 @@ MonoBehaviour:
   allWeapons:
   - {fileID: 11400000, guid: 03a96674dd87cc94db0ca9f84c397fbb, type: 2}
   - {fileID: 11400000, guid: a0075d381ee23e0478141cd6acb8c76e, type: 2}
-  allPowerUps: []
+  allPowerUps:
+  - {fileID: 11400000, guid: c11c71977714ee14fa34ef4370cda72a, type: 2}
 --- !u!1 &709453853
 GameObject:
   m_ObjectHideFlags: 0
@@ -45137,7 +45138,7 @@ Transform:
   m_GameObject: {fileID: 926517526}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.33, y: 0.63, z: -10}
+  m_LocalPosition: {x: -1.2, y: 0.23, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45441,7 +45442,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 277356965196214275, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
   m_PrefabInstance: {fileID: 56523674007860938}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1951874617}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b766589868a1d9d40bc663274c8f1cb9, type: 3}
@@ -46269,6 +46270,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.60828, y: 1.1176987}
   m_EdgeRadius: 0
+--- !u!1 &1951874617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8468308980068752377, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
+  m_PrefabInstance: {fileID: 56523674007860938}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1951874623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951874617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5084be3d78a6d08438d857d89ab1f503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxWeapons: 5
+  maxPowerUps: 5
+  weapons: []
+  powerUps: []
 --- !u!1 &1957638264
 GameObject:
   m_ObjectHideFlags: 0
@@ -46447,13 +46469,21 @@ PrefabInstance:
       propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 682163165}
+    - target: {fileID: 293235779385004644, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
+      propertyPath: baseSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 293235779385004644, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
+      propertyPath: sizeMultiplier
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4309439833734250535, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.33
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4309439833734250535, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.63
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 4309439833734250535, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -46491,10 +46521,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cirno
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6127250796011014604, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8468308980068752377, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1951874623}
   m_SourcePrefab: {fileID: 100100000, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
 --- !u!1001 &7070868802981544750
 PrefabInstance:

@@ -14,10 +14,16 @@ public class IceShardWeapon : WeaponBase
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         Quaternion rot = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        // Instantiate with the correct rotation
-        var shard = Instantiate(iceShardPrefab, transform.position, rot)
-                    .GetComponent<IceShard>();
+        // Instantiate shard
+        GameObject shardObj = Instantiate(iceShardPrefab, transform.position, rot);
 
+        // ----- Apply size from WeaponBase -----
+        // baseSize * sizeMultiplier comes from WeaponBase
+        float finalSize = GetSize();   // assuming WeaponBase has GetSize()
+        shardObj.transform.localScale *= finalSize;
+
+        // Pass stats to the projectile
+        var shard = shardObj.GetComponent<IceShard>();
         shard.Init(dir, shardSpeed, GetDamage(), level); // level = pierce count
     }
 }

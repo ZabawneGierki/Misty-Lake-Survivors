@@ -8,6 +8,7 @@ public class WeaponSizeBoost : PowerUpEffect
 
     public override void Apply(PlayerInventory inventory, int newLevel)
     {
+        Debug.Log($"Applying {powerName} level {newLevel} with size bonus {sizeBonusPerLevel * newLevel}%");
         // multiplier = 1 + (bonus * level)
         float multiplier = 1f + sizeBonusPerLevel * newLevel;
 
