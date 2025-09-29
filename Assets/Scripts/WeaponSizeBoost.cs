@@ -19,6 +19,8 @@ public class WeaponSizeBoost : PowerUpEffect
                 var baseScript = w.instance.GetComponent<WeaponBase>();
                 if (baseScript != null)
                     baseScript.sizeMultiplier = multiplier;
+                else 
+                    Debug.LogWarning($"Weapon {w.data.weaponName} does not have a WeaponBase component.");
             }
         }
     }

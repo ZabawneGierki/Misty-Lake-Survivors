@@ -10,7 +10,7 @@ public class LevelUpUI : MonoBehaviour
     public GameObject choiceButtonPrefab;
 
     public List<WeaponData> allWeapons;
-    public List<PowerUpData> allPowerUps;
+    public List<PowerUpEffect> allPowerUps;
 
     PlayerInventory inventory;
 
@@ -58,7 +58,7 @@ public class LevelUpUI : MonoBehaviour
 
     void MakePowerUpChoice()
     {
-        PowerUpData choice = allPowerUps[Random.Range(0, allPowerUps.Count)];
+        PowerUpEffect choice = allPowerUps[Random.Range(0, allPowerUps.Count)];
         var btn = Instantiate(choiceButtonPrefab, choiceParent);
         btn.GetComponentInChildren<Image>().sprite = choice.icon;
         btn.GetComponentInChildren<TextMeshProUGUI>().text = choice.powerName;

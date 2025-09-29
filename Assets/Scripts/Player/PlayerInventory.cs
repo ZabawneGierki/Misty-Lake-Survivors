@@ -14,7 +14,7 @@ public class PlayerInventory : MonoBehaviour
     [System.Serializable]
     public class PowerUpSlot
     {
-        public PowerUpData data;
+        public PowerUpEffect effect;
         public int level = 0;
     }
 
@@ -25,7 +25,7 @@ public class PlayerInventory : MonoBehaviour
     public List<PowerUpSlot> powerUps = new List<PowerUpSlot>();
 
     public bool HasWeapon(WeaponData data) => weapons.Exists(w => w.data == data);
-    public bool HasPowerUp(PowerUpData data) => powerUps.Exists(p => p.data == data);
+    public bool HasPowerUp(PowerUpEffect data) => powerUps.Exists(p => p.effect == data);
 
     public bool AddWeapon(WeaponData data, Transform mount)
     {
@@ -49,24 +49,26 @@ public class PlayerInventory : MonoBehaviour
         return false;
     }
 
-    public bool AddPowerUp(PowerUpData data)
+    public bool AddPowerUp(PowerUpEffect effect)
     {
         if (powerUps.Count >= maxPowerUps) return false;
-        var slot = new PowerUpSlot { data = data, level = 1 };
+        var slot = new PowerUpSlot { effect = effect, level = 1 };
         powerUps.Add(slot);
+        effect.Apply(this, 1);
         return true;
     }
 
-    public bool LevelUpPowerUp(PowerUpData data)
+    public bool LevelUpPowerUp(PowerUpEffect effect)
     {
-        var slot = powerUps.Find(p => p.data == data);
-        if (slot != null && slot.level < slot.data.maxLevel)
+        var slot = powerUps.Find(p => p.effect == effect);
+        if (slot != null && slot.level < slot.effect.maxLevel)
         {
             slot.level++;
-            // apply effects here (damage multiplier, cooldown, etc.)
+            slot.effect.Apply(this, slot.level);
             return true;
         }
         return false;
     }
+
 }
 

@@ -384,6 +384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3801353060017265192}
   - component: {fileID: 2600719157126424740}
+  - component: {fileID: 6127250796011014604}
   m_Layer: 6
   m_Name: WeaponMount
   m_TagString: Untagged
@@ -419,6 +420,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc24bddd75b83a46b6b7b8bc57b5602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6127250796011014604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7772234261105429786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5084be3d78a6d08438d857d89ab1f503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxWeapons: 5
+  maxPowerUps: 5
+  weapons: []
+  powerUps: []
 --- !u!1 &8468308980068752377
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +450,6 @@ GameObject:
   - component: {fileID: 6763735644705737734}
   - component: {fileID: 8840819204837282899}
   - component: {fileID: 277356965196214275}
-  - component: {fileID: 7826264479207706786}
   m_Layer: 6
   m_Name: Cirno
   m_TagString: Player
@@ -581,22 +597,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7826264479207706786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8468308980068752377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5084be3d78a6d08438d857d89ab1f503, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxWeapons: 5
-  maxPowerUps: 5
-  weapons: []
-  powerUps: []
 --- !u!1001 &5628574764261548096
 PrefabInstance:
   m_ObjectHideFlags: 0
