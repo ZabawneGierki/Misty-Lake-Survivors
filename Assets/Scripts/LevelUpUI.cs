@@ -42,8 +42,7 @@ public class LevelUpUI : MonoBehaviour
         // Pick a random weapon the player doesn’t have OR can level up
         WeaponData choice = allWeapons[Random.Range(0, allWeapons.Count)];
         var btn = Instantiate(choiceButtonPrefab, choiceParent);
-        //btn.GetComponentInChildren<Image>().sprite = choice.icon;
-        btn.transform.GetChild(1).GetComponent<Image>().sprite = choice.icon;
+        btn.transform.Find("Image").GetComponent<Image>().sprite = choice.icon;
         btn.GetComponentInChildren<TextMeshProUGUI>().text = choice.weaponName;
 
         btn.GetComponent<Button>().onClick.AddListener(() =>
