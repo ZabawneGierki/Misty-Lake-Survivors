@@ -40128,7 +40128,6 @@ GameObject:
   - component: {fileID: 682163164}
   - component: {fileID: 682163163}
   - component: {fileID: 682163165}
-  - component: {fileID: 682163166}
   m_Layer: 5
   m_Name: LevelUpAScreen
   m_TagString: Untagged
@@ -40162,21 +40161,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682163161}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.34190568, g: 0.93333334, b: 0.18823528, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 0a9b2471fa0ff664d8f04ace9f95d985, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -40202,25 +40201,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 682163161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: def746b685b6f8141ab4dcc69febb547, type: 3}
+  m_Script: {fileID: 11500000, guid: 7dedfa05d5ca01e4b876543866b6aae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLevel: {fileID: 1291796747}
-  fillImage: {fileID: 0}
---- !u!114 &682163166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682163161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: def746b685b6f8141ab4dcc69febb547, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLevel: {fileID: 0}
-  fillImage: {fileID: 0}
+  selectionPanel: {fileID: 682163161}
 --- !u!1 &709453853
 GameObject:
   m_ObjectHideFlags: 0
@@ -45016,6 +45000,7 @@ GameObject:
   - component: {fileID: 1602134467}
   - component: {fileID: 1602134469}
   - component: {fileID: 1602134468}
+  - component: {fileID: 1602134470}
   m_Layer: 5
   m_Name: LevelBar
   m_TagString: Untagged
@@ -45081,6 +45066,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602134466}
   m_CullTransparentMesh: 1
+--- !u!114 &1602134470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602134466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def746b685b6f8141ab4dcc69febb547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLevel: {fileID: 1291796747}
+  fillImage: {fileID: 1876643904}
 --- !u!1 &1698747897
 GameObject:
   m_ObjectHideFlags: 0

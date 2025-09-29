@@ -1,22 +1,81 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class LevelUpUI : MonoBehaviour
 {
-    public GameObject selectionPanel;
+    public GameObject panel;
+    public Transform choiceParent;
+    public GameObject choiceButtonPrefab;
 
-    void OnEnable()
+    public List<WeaponData> allWeapons;
+    public List<PowerUpData> allPowerUps;
+
+    PlayerInventory inventory;
+
+    void Start()
     {
-        FindObjectOfType<PlayerLevel>().OnLevelUp.AddListener(ShowPanel);
+        inventory = FindObjectOfType<PlayerInventory>();
+        panel.SetActive(false);
     }
 
-    void OnDisable()
+    public void ShowChoices()
     {
-        FindObjectOfType<PlayerLevel>().OnLevelUp.RemoveListener(ShowPanel);
+        panel.SetActive(true);
+        Time.timeScale = 0f;
+
+        // Clear old
+        foreach (Transform c in choiceParent) Destroy(c.gameObject);
+
+        // Generate 3 random choices (can tweak number)
+        for (int i = 0; i < 3; i++)
+        {
+            bool pickWeapon = Random.value < 0.5f; // 50/50 weapon or powerup
+            if (pickWeapon) MakeWeaponChoice();
+            else MakePowerUpChoice();
+        }
     }
 
-    void ShowPanel(int newLevel)
+    void MakeWeaponChoice()
     {
-        selectionPanel.SetActive(true);
-        Time.timeScale = 0f; // pause game during choice
+        // Pick a random weapon the player doesn’t have OR can level up
+        WeaponData choice = allWeapons[Random.Range(0, allWeapons.Count)];
+        var btn = Instantiate(choiceButtonPrefab, choiceParent);
+        btn.GetComponentInChildren<Image>().sprite = choice.icon;
+        btn.GetComponentInChildren<Text>().text = choice.weaponName;
+
+        btn.GetComponent<Button>().onClick.AddListener(() =>
+        {
+            if (inventory.HasWeapon(choice))
+                inventory.LevelUpWeapon(choice);
+            else
+                inventory.AddWeapon(choice, inventory.transform.Find("WeaponMount"));
+
+            ClosePanel();
+        });
+    }
+
+    void MakePowerUpChoice()
+    {
+        PowerUpData choice = allPowerUps[Random.Range(0, allPowerUps.Count)];
+        var btn = Instantiate(choiceButtonPrefab, choiceParent);
+        btn.GetComponentInChildren<Image>().sprite = choice.icon;
+        btn.GetComponentInChildren<Text>().text = choice.powerName;
+
+        btn.GetComponent<Button>().onClick.AddListener(() =>
+        {
+            if (inventory.HasPowerUp(choice))
+                inventory.LevelUpPowerUp(choice);
+            else
+                inventory.AddPowerUp(choice);
+
+            ClosePanel();
+        });
+    }
+
+    void ClosePanel()
+    {
+        panel.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
