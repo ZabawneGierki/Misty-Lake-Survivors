@@ -41013,8 +41013,8 @@ MonoBehaviour:
   choiceParent: {fileID: 578407209}
   choiceButtonPrefab: {fileID: 475343287864991101, guid: 08e277f65815e1f4f9e76e2bbaf3a75e, type: 3}
   allWeapons:
-  - {fileID: 11400000, guid: 03a96674dd87cc94db0ca9f84c397fbb, type: 2}
   - {fileID: 11400000, guid: a0075d381ee23e0478141cd6acb8c76e, type: 2}
+  - {fileID: 11400000, guid: 03a96674dd87cc94db0ca9f84c397fbb, type: 2}
   allPowerUps:
   - {fileID: 11400000, guid: c11c71977714ee14fa34ef4370cda72a, type: 2}
 --- !u!1 &709453853
@@ -41156,11 +41156,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99ae7e9a07cf9cb429eed293421e9fb0, type: 3}
---- !u!4 &731981524 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3801353060017265192, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
-  m_PrefabInstance: {fileID: 56523674007860938}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &773048019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46587,68 +46582,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99ae7e9a07cf9cb429eed293421e9fb0, type: 3}
---- !u!1001 &1397445352
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 731981524}
-    m_Modifications:
-    - target: {fileID: 258351690065898973, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 258351690065898973, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 258351690065898973, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 258351690065898973, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 258351690065898973, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 258351690065898973, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 258351690065898973, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 258351690065898973, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 258351690065898973, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 258351690065898973, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7017431717939419583, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
-      propertyPath: m_Name
-      value: Ofuda
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
---- !u!4 &1397445353 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 258351690065898973, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
-  m_PrefabInstance: {fileID: 1397445352}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1427207404 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2159235837369780014, guid: 99ae7e9a07cf9cb429eed293421e9fb0, type: 3}
@@ -48092,22 +48025,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6168286986273602432, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
-      propertyPath: weapons.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8468308980068752377, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
       propertyPath: m_Name
       value: Cirno
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 181393185516933868, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
-    - {fileID: 7040447264717837094, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 3801353060017265192, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1397445353}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0646c89ca5a896b4497c6c6cb626b07b, type: 3}
 --- !u!1001 &7070868802981544750

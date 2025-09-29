@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3e9b2d2e0635c4eaa137b98918250c, type: 3}
   m_Name: Ofuda
   m_EditorClassIdentifier: 
-  weaponName: 
-  icon: {fileID: 0}
-  description: 
-  weaponPrefab: {fileID: 0}
+  weaponName: Reimu-chan's ofuda card
+  icon: {fileID: 21300000, guid: 068e2e6316fab7c4e847943a6d0d886b, type: 3}
+  description: Fire a card in a random direction
+  weaponPrefab: {fileID: 7017431717939419583, guid: afb4c205efd037145abe47d678d0b17f, type: 3}
   maxLevel: 5

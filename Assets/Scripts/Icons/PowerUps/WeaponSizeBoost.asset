@@ -16,4 +16,4 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 5d322221ceeda3c4394a7e28f06c87ae, type: 3}
   description: increazes the size of the weapons
   maxLevel: 5
-  sizeBonusPerLevel: 0.1
+  sizeBonusPerLevel: 0.5
