@@ -15,5 +15,5 @@ MonoBehaviour:
   weaponName: Cirno's Shard
   icon: {fileID: 21300000, guid: 4369bef1a3214e34e936f001948fe15e, type: 3}
   description: 
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 3434003037216650086, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
   maxLevel: 5
