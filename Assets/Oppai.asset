@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f3e9b2d2e0635c4eaa137b98918250c, type: 3}
-  m_Name: IceShard
+  m_Name: Oppai
   m_EditorClassIdentifier: 
-  weaponName: Cirno's Shard
-  icon: {fileID: 21300000, guid: 4369bef1a3214e34e936f001948fe15e, type: 3}
+  weaponName: weqw
+  icon: {fileID: -1725636941, guid: cc10b3c450f888e498c30938adb4aae2, type: 3}
   description: 
   weaponPrefab: {fileID: 0}
   maxLevel: 5

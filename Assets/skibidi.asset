@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f3e9b2d2e0635c4eaa137b98918250c, type: 3}
-  m_Name: IceShard
+  m_Name: skibidi
   m_EditorClassIdentifier: 
-  weaponName: Cirno's Shard
-  icon: {fileID: 21300000, guid: 4369bef1a3214e34e936f001948fe15e, type: 3}
+  weaponName: skibidi
+  icon: {fileID: 1199832720, guid: a9667d9cdb9bc374e900f309319a0108, type: 3}
   description: 
   weaponPrefab: {fileID: 0}
   maxLevel: 5

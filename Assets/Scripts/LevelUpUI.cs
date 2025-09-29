@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 public class LevelUpUI : MonoBehaviour
 {
@@ -41,8 +42,9 @@ public class LevelUpUI : MonoBehaviour
         // Pick a random weapon the player doesn’t have OR can level up
         WeaponData choice = allWeapons[Random.Range(0, allWeapons.Count)];
         var btn = Instantiate(choiceButtonPrefab, choiceParent);
-        btn.GetComponentInChildren<Image>().sprite = choice.icon;
-        btn.GetComponentInChildren<Text>().text = choice.weaponName;
+        //btn.GetComponentInChildren<Image>().sprite = choice.icon;
+        btn.transform.GetChild(1).GetComponent<Image>().sprite = choice.icon;
+        btn.GetComponentInChildren<TextMeshProUGUI>().text = choice.weaponName;
 
         btn.GetComponent<Button>().onClick.AddListener(() =>
         {
@@ -60,7 +62,7 @@ public class LevelUpUI : MonoBehaviour
         PowerUpData choice = allPowerUps[Random.Range(0, allPowerUps.Count)];
         var btn = Instantiate(choiceButtonPrefab, choiceParent);
         btn.GetComponentInChildren<Image>().sprite = choice.icon;
-        btn.GetComponentInChildren<Text>().text = choice.powerName;
+        btn.GetComponentInChildren<TextMeshProUGUI>().text = choice.powerName;
 
         btn.GetComponent<Button>().onClick.AddListener(() =>
         {
