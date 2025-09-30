@@ -60,7 +60,8 @@ public class LevelUpUI : MonoBehaviour
     {
         PowerUpEffect choice = allPowerUps[Random.Range(0, allPowerUps.Count)];
         var btn = Instantiate(choiceButtonPrefab, choiceParent);
-        btn.GetComponentInChildren<Image>().sprite = choice.icon;
+        
+        btn.transform.Find("Image").GetComponent<Image>().sprite = choice.icon;
         btn.GetComponentInChildren<TextMeshProUGUI>().text = choice.powerName;
 
         btn.GetComponent<Button>().onClick.AddListener(() =>
