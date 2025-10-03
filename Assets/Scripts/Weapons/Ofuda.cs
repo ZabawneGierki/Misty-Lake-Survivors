@@ -25,6 +25,8 @@ public class Ofuda : WeaponBase
 
         var card = Instantiate(cardPrefab, spawnPos, Quaternion.identity)
                       .GetComponent<Projectile>();
+        float finalSize = GetSize();
+        card.transform.localScale *= finalSize;
         card.direction = dir.normalized;
         card.speed = GetProjectileSpeed();
         card.damage = GetDamage();

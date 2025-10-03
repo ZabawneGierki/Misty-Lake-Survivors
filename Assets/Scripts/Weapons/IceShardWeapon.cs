@@ -14,12 +14,15 @@ public class IceShardWeapon : WeaponBase
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         Quaternion rot = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        // Instantiate shard
-        GameObject shardObj = Instantiate(iceShardPrefab, transform.position, rot);
+        // ----- NEW: offset spawn position -----
+        float spawnOffset = 0.5f; // distance from player center
+        Vector3 spawnPos = transform.position + (Vector3)(dir * spawnOffset);
 
-        // ----- Apply size from WeaponBase -----
-        // baseSize * sizeMultiplier comes from WeaponBase
-        float finalSize = GetSize();   // assuming WeaponBase has GetSize()
+        // Instantiate shard at the offset position
+        GameObject shardObj = Instantiate(iceShardPrefab, spawnPos, rot);
+
+        // Apply size from WeaponBase
+        float finalSize = GetSize();
         shardObj.transform.localScale *= finalSize;
 
         // Pass stats to the projectile

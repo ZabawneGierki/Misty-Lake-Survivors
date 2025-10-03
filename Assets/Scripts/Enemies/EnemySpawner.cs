@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class ProgressiveSpawner : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
     public List<EnemyWave> waves = new List<EnemyWave>();
     public float spawnRadius = 15f;
