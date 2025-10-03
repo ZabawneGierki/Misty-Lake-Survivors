@@ -20,9 +20,11 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+     
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             TakeDamage(10f); // Example damage value
         }

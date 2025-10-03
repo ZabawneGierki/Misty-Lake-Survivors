@@ -6,9 +6,9 @@ public class AuraField : MonoBehaviour
     public CircleCollider2D areaCollider; // set as trigger
     public SpriteRenderer sprite;         // optional visual
 
-    private float tickRate = 1f;
-    private float timer = 0f;
-    private float damage = 1f;
+    public float tickRate = 0.1f;
+    public float timer = 0f;
+    public float damage = 65f;
 
     private readonly List<EnemyHealth> enemiesInRange = new List<EnemyHealth>();
 
@@ -33,21 +33,37 @@ public class AuraField : MonoBehaviour
     {
         damage = dmg;
         tickRate = cooldown;
-        UpdateSize(size);
+
+        // Assume prefab collider radius = 1 = base size
+        areaCollider.radius = size;
+
+        // Scale sprite so it matches collider diameter
+        if (sprite != null)
+        {
+            float diameter = areaCollider.radius * 2f;
+            sprite.transform.localScale = new Vector3(diameter, diameter, 1f);
+        }
     }
 
     private void UpdateSize(float size)
     {
         // Scale collider + visual sprite
         areaCollider.radius = 1f * size; // base radius times size multiplier
-        if (sprite != null) sprite.transform.localScale = Vector3.one * size * 2f;
+        //if (sprite != null) sprite.transform.localScale = Vector3.one * size * 2f;
     }
 
     private void ApplyDamage()
     {
-        foreach (var enemy in enemiesInRange)
+        for (int i = enemiesInRange.Count - 1; i >= 0; i--)
         {
-            if (enemy != null) enemy.TakeDamage(damage);
+            var enemy = enemiesInRange[i];
+            if (enemy == null)
+            {
+                enemiesInRange.RemoveAt(i); // clean up destroyed enemies
+                continue;
+            }
+
+            enemy.TakeDamage(damage);
         }
     }
 
