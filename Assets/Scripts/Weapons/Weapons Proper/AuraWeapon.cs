@@ -16,6 +16,6 @@ public class AuraWeapon : WeaponBase
         }
 
         // Update its stats every time Fire is called
-        auraField.UpdateStats(GetDamage(), GetSize(), attackCooldown);
+        auraField.UpdateStats(GetDamage(), GetSize(), baseCooldown);
     }
 }
