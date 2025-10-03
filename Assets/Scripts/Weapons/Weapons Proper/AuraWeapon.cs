@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AuraWeapon : MonoBehaviour
+public class AuraWeapon : WeaponBase
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject auraPrefab;
+    private GameObject auraInstance;
+    private AuraField auraField;
 
-    // Update is called once per frame
-    void Update()
+    protected override void Fire()
     {
-        
+        // Aura is persistent: spawn it once and keep updating stats
+        if (auraInstance == null)
+        {
+            auraInstance = Instantiate(auraPrefab, transform.position, Quaternion.identity, transform);
+            auraField = auraInstance.GetComponent<AuraField>();
+        }
+
+        // Update its stats every time Fire is called
+        auraField.UpdateStats(GetDamage(), GetSize(), attackCooldown);
     }
 }
