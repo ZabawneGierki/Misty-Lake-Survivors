@@ -13,7 +13,7 @@ public class AuraField : MonoBehaviour
 
     private void Start()
     {
-      // transform.localScale = new Vector2(1.2f,1.2f );
+        transform.localScale = new Vector2(1.2f,1.2f );
     }
     private void Update()
     {
@@ -53,7 +53,7 @@ public class AuraField : MonoBehaviour
             // Set the gizmo color (e.g., yellow) and a custom matrix to draw a 2D circle
             Gizmos.color = Color.yellow;
             // For a 2D circle, we set the z scale to 1 and preserve the sprite's aspect ratio
-            Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, new Vector3(1, 1, 1));
+            //Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, new Vector3(1, 1, 1));
 
             // Draw the circle at the center of the sprite's bounds
             Gizmos.DrawWireSphere(spriteBounds.center, radius);
@@ -68,6 +68,12 @@ public class AuraField : MonoBehaviour
     public void DealDamage( )
     {
         Debug.Log($"Dealing damage to enemies within radius. Time passed: {Time.timeSinceLevelLoad:F2}" );
+
+        Bounds spriteBounds = spriteRenderer.sprite.bounds;
+
+        float radius = Mathf.Max(spriteBounds.extents.x * transform.localScale.x, spriteBounds.extents.y * transform.localScale.y);
+
+         
 
         // Find all colliders within the radius
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, radius);
