@@ -10,6 +10,7 @@ public class DaichanAura : WeaponBase
 
     protected override void Fire()
     {
+        Debug.Log($"Firing Daichan Aura at {Time.timeSinceLevelLoad:F2} seconds");
         if (auraInstance == null)
         {
             // Spawn once, parent to player
@@ -20,9 +21,9 @@ public class DaichanAura : WeaponBase
 
         // Update aura stats each fire call (damage, size, tick speed)
         // random size for now
-        float randomSize = Random.Range(0.5f, 2.2f);
+        
 
-        auraField.UpdateStats(GetDamage(), randomSize);
+        auraField.UpdateStats(GetDamage(), GetSize());
         auraField.DealDamage();
     }
 }

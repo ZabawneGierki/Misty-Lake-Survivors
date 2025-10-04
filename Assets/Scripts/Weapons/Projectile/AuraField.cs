@@ -8,7 +8,7 @@ public class AuraField : MonoBehaviour
      
     private float timer = 0f;
     private float damage = 100f;
-    private float radius = 1f;
+     
 
 
      
@@ -17,8 +17,8 @@ public class AuraField : MonoBehaviour
     public void UpdateStats(float dmg, float size   )
     { 
         this.damage = dmg;
-        this.radius = size;
-         
+         transform.localScale = new Vector2(size, size);
+
 
     }
 
