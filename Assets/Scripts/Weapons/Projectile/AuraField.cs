@@ -5,29 +5,21 @@ public class AuraField : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer; // assign in prefab
 
-    private float tickRate = 1f;
+     
     private float timer = 0f;
-    private float damage = 1f;
+    private float damage = 100f;
     private float radius = 1f;
 
 
-    private void Start()
-    {
-        transform.localScale = new Vector2(1.2f,1.2f );
-    }
-    private void Update()
-    {
-        timer += Time.deltaTime;
-        if (timer >= tickRate)
-        {
-           DealDamage();
-            timer = 0f;
-        }
-    }
+     
+    
 
-    public void UpdateStats(float dmg, float size, float cooldown)
+    public void UpdateStats(float dmg, float size   )
     { 
+        this.damage = dmg;
+        this.radius = size;
          
+
     }
 
     void OnDrawGizmos()
@@ -61,6 +53,8 @@ public class AuraField : MonoBehaviour
             // Restore the old Gizmos matrix and color
             Gizmos.matrix = oldMatrix;
             Gizmos.color = oldColor;
+
+             
         }
     }
 
@@ -76,7 +70,18 @@ public class AuraField : MonoBehaviour
          
 
         // Find all colliders within the radius
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, radius);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(spriteBounds.center, radius);
+        foreach (var hitCollider in hitColliders)
+        {
+            // Check if the collider belongs to an enemy
+            EnemyHealth enemy = hitCollider.GetComponent<EnemyHealth>();
+            if (enemy != null)
+            {
+                // Apply damage to the enemy
+                enemy.TakeDamage(damage);
+                Debug.Log($"Dealt {damage} damage to {enemy.name}");
+            }
+        }
     }
 
 
