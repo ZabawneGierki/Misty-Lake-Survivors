@@ -3,87 +3,69 @@ using System.Collections.Generic;
 
 public class AuraField : MonoBehaviour
 {
-    public CircleCollider2D areaCollider; // set as trigger
-    public SpriteRenderer sprite;         // optional visual
+    public SpriteRenderer spriteRenderer; // assign in prefab
 
-    public float tickRate = 0.1f;
-    public float timer = 0f;
-    public float damage = 65f;
+    private float tickRate = 1f;
+    private float timer = 0f;
+    private float damage = 1f;
+    private float radius = 1f;
 
-    private readonly List<EnemyHealth> enemiesInRange = new List<EnemyHealth>();
 
-    void Update()
+    private void Update()
     {
         timer += Time.deltaTime;
         if (timer >= tickRate)
         {
+           DealDamage();
             timer = 0f;
-            ApplyDamage();
         }
-    }
-
-    public void Init(float dmg, float size, float cooldown)
-    {
-        damage = dmg;
-        tickRate = cooldown; // reuse cooldown as tick interval
-        UpdateSize(size);
     }
 
     public void UpdateStats(float dmg, float size, float cooldown)
+    { 
+         
+    }
+
+    void OnDrawGizmos()
     {
-        damage = dmg;
-        tickRate = cooldown;
-
-        // Assume prefab collider radius = 1 = base size
-        areaCollider.radius = size;
-
-        // Scale sprite so it matches collider diameter
-        if (sprite != null)
+        if (spriteRenderer == null)
         {
-            float diameter = areaCollider.radius * 2f;
-            sprite.transform.localScale = new Vector3(diameter, diameter, 1f);
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        if (spriteRenderer != null && spriteRenderer.sprite != null)
+        {
+            // Get the sprite bounds
+            Bounds spriteBounds = spriteRenderer.sprite.bounds;
+
+            // Calculate the radius based on the sprite's extents (half the width or height)
+            // We take the maximum of the two to ensure it encompasses the entire sprite
+            float radius = Mathf.Max(spriteBounds.extents.x, spriteBounds.extents.y);
+
+            // Store the current Gizmos matrix and color
+            Matrix4x4 oldMatrix = Gizmos.matrix;
+            Color oldColor = Gizmos.color;
+
+            // Set the gizmo color (e.g., yellow) and a custom matrix to draw a 2D circle
+            Gizmos.color = Color.yellow;
+            // For a 2D circle, we set the z scale to 1 and preserve the sprite's aspect ratio
+            Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, new Vector3(1, 1, 1));
+
+            // Draw the circle at the center of the sprite's bounds
+            Gizmos.DrawWireSphere(spriteBounds.center, radius);
+
+            // Restore the old Gizmos matrix and color
+            Gizmos.matrix = oldMatrix;
+            Gizmos.color = oldColor;
         }
     }
 
-    private void UpdateSize(float size)
+
+    public void DealDamage( )
     {
-        // Scale collider + visual sprite
-        areaCollider.radius = 1f * size; // base radius times size multiplier
-        //if (sprite != null) sprite.transform.localScale = Vector3.one * size * 2f;
+        Debug.Log($"Dealing damage to enemies within radius. Time passed: {Time.timeSinceLevelLoad:F2}" );
     }
 
-    private void ApplyDamage()
-    {
-        for (int i = enemiesInRange.Count - 1; i >= 0; i--)
-        {
-            var enemy = enemiesInRange[i];
-            if (enemy == null)
-            {
-                enemiesInRange.RemoveAt(i); // clean up destroyed enemies
-                continue;
-            }
 
-            enemy.TakeDamage(damage);
-        }
-    }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("Enemy"))
-        {
-            var enemy = col.GetComponent<EnemyHealth>();
-            if (enemy != null && !enemiesInRange.Contains(enemy))
-                enemiesInRange.Add(enemy);
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.CompareTag("Enemy"))
-        {
-            var enemy = col.GetComponent<EnemyHealth>();
-            if (enemy != null && enemiesInRange.Contains(enemy))
-                enemiesInRange.Remove(enemy);
-        }
-    }
 }
