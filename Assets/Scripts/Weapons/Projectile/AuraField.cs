@@ -11,6 +11,10 @@ public class AuraField : MonoBehaviour
     private float radius = 1f;
 
 
+    private void Start()
+    {
+      // transform.localScale = new Vector2(1.2f,1.2f );
+    }
     private void Update()
     {
         timer += Time.deltaTime;
@@ -40,7 +44,7 @@ public class AuraField : MonoBehaviour
 
             // Calculate the radius based on the sprite's extents (half the width or height)
             // We take the maximum of the two to ensure it encompasses the entire sprite
-            float radius = Mathf.Max(spriteBounds.extents.x, spriteBounds.extents.y);
+            float radius = Mathf.Max(spriteBounds.extents.x * transform.localScale.x, spriteBounds.extents.y * transform.localScale.y);
 
             // Store the current Gizmos matrix and color
             Matrix4x4 oldMatrix = Gizmos.matrix;
@@ -64,6 +68,9 @@ public class AuraField : MonoBehaviour
     public void DealDamage( )
     {
         Debug.Log($"Dealing damage to enemies within radius. Time passed: {Time.timeSinceLevelLoad:F2}" );
+
+        // Find all colliders within the radius
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, radius);
     }
 
 
