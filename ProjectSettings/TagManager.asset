@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Wall
   - ScreenEdge
+  - Pickup
+  - Magnet
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Enemy
   - PlayerProjectile
   - Walls
-  - 
+  - Items
   - 
   - 
   - 

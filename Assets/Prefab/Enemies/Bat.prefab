@@ -126,6 +126,8 @@ MonoBehaviour:
   flashColor: {r: 0.9622642, g: 0.75027645, b: 0.077162705, a: 1}
   flashDuration: 0.1
   deathEffectPrefab: {fileID: 5625975510390865483, guid: fd50e40dbd6c511469edb31874fe6b4b, type: 3}
+  gem: {fileID: 8979778605007393389, guid: 99ae7e9a07cf9cb429eed293421e9fb0, type: 3}
+  coin: {fileID: 0}
 --- !u!114 &4011269226813128326
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -48,7 +48,7 @@ public class AuraField : MonoBehaviour
             //Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, new Vector3(1, 1, 1));
 
             // Draw the circle at the center of the sprite's bounds
-            Gizmos.DrawWireSphere(spriteBounds.center, radius);
+            Gizmos.DrawWireSphere(transform.position, radius);
 
             // Restore the old Gizmos matrix and color
             Gizmos.matrix = oldMatrix;
@@ -70,7 +70,7 @@ public class AuraField : MonoBehaviour
          
 
         // Find all colliders within the radius
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(spriteBounds.center, radius);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, radius);
         foreach (var hitCollider in hitColliders)
         {
             // Check if the collider belongs to an enemy

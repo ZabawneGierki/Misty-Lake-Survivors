@@ -14,6 +14,11 @@ public class EnemyHealth : MonoBehaviour
     [Header("Death")]
     public GameObject deathEffectPrefab;
 
+
+    [Header("Items dropped on death")]
+    public GameObject gem;
+    public GameObject coin;
+
     SpriteRenderer sr;
     Color originalColor;
 
@@ -51,6 +56,13 @@ public class EnemyHealth : MonoBehaviour
         if (deathEffectPrefab)
         {
             Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+        }
+
+        // Drop items
+        if (gem)
+        {
+            Instantiate(gem, transform.position, Quaternion.identity);
+            
         }
         Destroy(gameObject);
     }

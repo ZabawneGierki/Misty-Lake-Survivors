@@ -40754,6 +40754,53 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99ae7e9a07cf9cb429eed293421e9fb0, type: 3}
+--- !u!1 &389287729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 389287730}
+  - component: {fileID: 389287731}
+  m_Layer: 6
+  m_Name: Magnet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &389287730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389287729}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4253363189586425581}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &389287731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389287729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2ff8c5ae92afd43af010fb2401e1bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseRadius: 2
+  radiusMultiplier: 1
+  pullSpeed: 5
 --- !u!4 &391668921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2159235837369780014, guid: 99ae7e9a07cf9cb429eed293421e9fb0, type: 3}
@@ -41295,8 +41342,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 682163162}
   - {fileID: 1602134467}
+  - {fileID: 682163162}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -41349,8 +41396,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 20.050049}
-  m_SizeDelta: {x: -413.4, y: -115.88}
+  m_AnchoredPosition: {x: -0.00030517578, y: 0.00048828125}
+  m_SizeDelta: {x: 0, y: 0.0010376}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578407210
 MonoBehaviour:
@@ -41365,7 +41412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.6008494, g: 0.99215686, b: 0.5411765, a: 0.72156864}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -41581,8 +41628,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 81, y: -21}
-  m_SizeDelta: {x: -1013.42, y: -429.89}
+  m_AnchoredPosition: {x: 32.07, y: -5.81}
+  m_SizeDelta: {x: -409.28, y: -183.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &682163163
 MonoBehaviour:
@@ -41640,7 +41687,7 @@ MonoBehaviour:
   allWeapons:
   - {fileID: 11400000, guid: a0075d381ee23e0478141cd6acb8c76e, type: 2}
   - {fileID: 11400000, guid: 03a96674dd87cc94db0ca9f84c397fbb, type: 2}
-  - {fileID: 11400000, guid: b223e8f5a7d9a1b42b2dce276c1381bb, type: 2}
+  - {fileID: 11400000, guid: e50947d235008194cb7a42203f5dfb30, type: 2}
   allPowerUps:
   - {fileID: 11400000, guid: c11c71977714ee14fa34ef4370cda72a, type: 2}
 --- !u!1 &709453853
@@ -41720,60 +41767,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 7.529689}
   m_EdgeRadius: 0
---- !u!1 &723898767
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 723898769}
-  - component: {fileID: 723898768}
-  m_Layer: 0
-  m_Name: Daichan Aura Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &723898768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723898767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93043f8c06be51d45b0d1e4c48a58ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: 1
-  baseCooldown: 1
-  baseDamage: 10
-  baseProjectileSpeed: 5
-  baseSize: 1
-  cooldownMultiplier: 1
-  damageMultiplier: 1
-  speedMultiplier: 1
-  sizeMultiplier: 1
-  auraPrefab: {fileID: 220087440500615268, guid: c4ad6cb36fee2e5469f614885854b129, type: 3}
---- !u!4 &723898769
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723898767}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &726848043 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2159235837369780014, guid: 99ae7e9a07cf9cb429eed293421e9fb0, type: 3}
@@ -48584,6 +48577,60 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 2192605085347405251, guid: b4eb127a1411bf74e9e0d37440dae058, type: 3}
     amount: 20
     interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
   spawnRadius: 10
 --- !u!4 &1959216032 stripped
 Transform:
@@ -49154,6 +49201,7 @@ Transform:
   - {fileID: 255294985}
   - {fileID: 3749758567722200290}
   - {fileID: 7681875020627686972}
+  - {fileID: 389287730}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4599173938076315541
@@ -49505,4 +49553,3 @@ SceneRoots:
   - {fileID: 566453733}
   - {fileID: 1698747900}
   - {fileID: 1599254861}
-  - {fileID: 723898769}
