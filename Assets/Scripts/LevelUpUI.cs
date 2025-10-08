@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;    
 
 public class LevelUpUI : MonoBehaviour
 {
@@ -74,9 +75,9 @@ public class LevelUpUI : MonoBehaviour
     {
         var btnObj = Instantiate(choiceButtonPrefab, choiceParent);
         var img = btnObj.transform.Find("Icon").GetComponent<Image>();
-        var nameTxt = btnObj.transform.Find("Name").GetComponent<Text>();
-        var descTxt = btnObj.transform.Find("Description").GetComponent<Text>();
-        var levelTxt = btnObj.transform.Find("Level").GetComponent<Text>();
+        var nameTxt = btnObj.transform.Find("Name").GetComponent<TextMeshProUGUI>();
+        var descTxt = btnObj.transform.Find("Description").GetComponent<TextMeshProUGUI>();
+        var levelTxt = btnObj.transform.Find("Level").GetComponent<TextMeshProUGUI>();
 
         Button btn = btnObj.GetComponent<Button>();
 
