@@ -5,7 +5,7 @@ public class WeaponData : ScriptableObject
 {
     public string weaponName;
     public Sprite icon;
-    [TextArea]public string[] descriptions;
+    [TextArea]public string[] descriptions; //description per level
     public GameObject weaponPrefab;
     public int maxLevel = 5;
 
