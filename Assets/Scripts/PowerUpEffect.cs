@@ -4,9 +4,16 @@ public abstract class PowerUpEffect : ScriptableObject
 {
     public string powerName;
     public Sprite icon;
-    public string description;
+    [TextArea] public string[] levelDescriptions; // description per level
     public int maxLevel = 5;
 
-    // Called when this power-up is picked or leveled up.
+    public bool IsMaxed(int currentLevel) => currentLevel >= maxLevel;
+    public string GetDescription(int level)
+    {
+        if (level - 1 < levelDescriptions.Length)
+            return levelDescriptions[level - 1];
+        return levelDescriptions.Length > 0 ? levelDescriptions[^1] : "";
+    }
+
     public abstract void Apply(PlayerInventory inventory, int newLevel);
 }
