@@ -41396,7 +41396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00030517578, y: 0.00048828125}
+  m_AnchoredPosition: {x: -0.00024414062, y: 0.00048828125}
   m_SizeDelta: {x: 0, y: 0.0010376}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578407210
@@ -41628,7 +41628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 32.070007, y: -5.8099976}
+  m_AnchoredPosition: {x: 32.07007, y: -5.8100586}
   m_SizeDelta: {x: -409.28, y: -183.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &682163163
@@ -41690,6 +41690,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e50947d235008194cb7a42203f5dfb30, type: 2}
   allPowerUps:
   - {fileID: 11400000, guid: c11c71977714ee14fa34ef4370cda72a, type: 2}
+  healIcon: {fileID: 0}
+  healText: Recover 20% HP
 --- !u!1 &709453853
 GameObject:
   m_ObjectHideFlags: 0
