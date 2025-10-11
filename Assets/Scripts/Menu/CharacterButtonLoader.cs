@@ -16,6 +16,8 @@ public class CharacterButtonLoader : MonoBehaviour
     [SerializeField]
     List<CharacterData> characterDataList;
     [SerializeField] GameObject characterButtonPrefab;
+
+    [SerializeField] Transform buttonContainer;
     // Start is called before the first frame update
     void Start()
     {
