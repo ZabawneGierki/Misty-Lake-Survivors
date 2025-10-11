@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7005226660698948638}
   - component: {fileID: 5480480649434570900}
   m_Layer: 5
-  m_Name: CharacterPortrait
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 1489656587442083284}
   - component: {fileID: 1647271274388036086}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,8 +109,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -75.056}
-  m_SizeDelta: {x: -29.74, y: -171.6}
+  m_AnchoredPosition: {x: 2.9000015, y: -57.961}
+  m_SizeDelta: {x: -29.0986, y: -115.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1489656587442083284
 CanvasRenderer:
@@ -167,10 +167,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34.55
-  m_fontSizeBase: 24
+  m_fontSize: 15.33
+  m_fontSizeBase: 15.33
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 1
   m_fontSizeMax: 35
   m_fontStyle: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0.9330405, w: 0}
+  m_margin: {x: 0, y: -0.07467651, z: -0.018497467, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 758964247225828158}
   - component: {fileID: 3213001635004347316}
   m_Layer: 5
-  m_Name: Button 1
+  m_Name: CharacterButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
