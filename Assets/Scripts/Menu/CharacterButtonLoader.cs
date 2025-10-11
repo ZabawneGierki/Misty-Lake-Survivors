@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 
 
 
@@ -27,14 +29,23 @@ public class CharacterButtonLoader : MonoBehaviour
         foreach(CharacterData character in characterDataList)
         {
             GameObject button = Instantiate(characterButtonPrefab, buttonContainer);
+           
+             
             // Set button data here
             button.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = character.fullName;
             button.transform.Find("Icon").GetComponent<Image>().sprite = character.characterPortrait;
+            button.GetComponent<Button>().onClick.AddListener(() => OnClick(character.name));
 
         }
     }
 
+    private void OnClick(CharacterNames characterName)
+    {
+        Debug.Log("Clicked on character: " + characterName);
+        // Handle character selection logic here
+        PlayerData.selectedcharacterName = characterName;
+        
+    }
 
 
-   
 }
