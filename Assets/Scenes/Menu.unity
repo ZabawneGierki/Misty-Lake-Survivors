@@ -724,7 +724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8829457325027055673, guid: 18b4486eb46b17f4093b14844a205000, type: 3}
       propertyPath: m_Name
-      value: Button 1
+      value: Reimu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
