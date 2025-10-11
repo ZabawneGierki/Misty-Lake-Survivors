@@ -14,4 +14,5 @@ public enum CharacterNames
 public static class PlayerData  
 {
      public static CharacterNames selectedcharacterName = CharacterNames.Reimu;
+    public static int selectedLevel = 1;
 }
