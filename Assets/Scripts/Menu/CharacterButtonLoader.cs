@@ -34,7 +34,8 @@ public class CharacterButtonLoader : MonoBehaviour
             // Set button data here
             button.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = character.fullName;
             button.transform.Find("Icon").GetComponent<Image>().sprite = character.characterPortrait;
-            button.GetComponent<Button>().onClick.AddListener(() => OnClick(character.name));
+            button.GetComponent<Toggle>().onValueChanged.AddListener((isOn) => { if (isOn) OnClick(character.name); });
+            button.GetComponent<Toggle>().group = buttonContainer.GetComponent<ToggleGroup>();
 
         }
     }
