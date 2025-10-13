@@ -11,17 +11,16 @@ public class ToggleAnimation : MonoBehaviour
     {
         BackgroundImage = GetComponentInParent<Image>();
         Debug.Log(BackgroundImage.name);
-    }
-
-
-    private void Start()
-    {
-         
         Toggle toggle = GetComponentInChildren<Toggle>();
-         
+
         toggle.onValueChanged.AddListener(AnimateToggle);
         toggle.isOn = false;
+        // Initialize the background image alpha based on the initial toggle state
+        BackgroundImage.DOFade(0.5f, 0.2f);
     }
+
+
+     
     public void AnimateToggle(bool isOn)
     {
         if (isOn)
