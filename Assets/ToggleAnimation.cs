@@ -20,6 +20,7 @@ public class ToggleAnimation : MonoBehaviour
         Toggle toggle = GetComponentInChildren<Toggle>();
          
         toggle.onValueChanged.AddListener(AnimateToggle);
+        toggle.isOn = false;
     }
     public void AnimateToggle(bool isOn)
     {
