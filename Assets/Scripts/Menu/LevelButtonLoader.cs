@@ -13,6 +13,8 @@ public class LevelData
 }
 public class LevelButtonLoader : MonoBehaviour
 {
+    [SerializeField]
+    List<LevelData> levelDataList;
     // Start is called before the first frame update
     void Start()
     {
