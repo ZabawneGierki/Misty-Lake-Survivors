@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class ToggleAnimation : MonoBehaviour
 {
@@ -14,10 +14,13 @@ public class ToggleAnimation : MonoBehaviour
     }
     public void AnimateToggle(bool isOn)
     {
-        Animator animator = GetComponent<Animator>();
-        if (animator != null)
+        if (isOn)
         {
-            animator.SetBool("isOn", isOn);
+            BackgroundImage.DOColor(new Color(1f, 1f, 1f, 0.5f), 0.2f);
+        }
+        else
+        {
+            BackgroundImage.DOColor(new Color(1f, 1f, 1f, 0.2f), 0.2f);
         }
     }
 }
