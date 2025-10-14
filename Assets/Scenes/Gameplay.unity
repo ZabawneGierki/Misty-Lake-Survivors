@@ -40965,6 +40965,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 477714389}
+  - component: {fileID: 477714390}
   m_Layer: 0
   m_Name: GameplayManager
   m_TagString: Untagged
@@ -40981,12 +40982,24 @@ Transform:
   m_GameObject: {fileID: 477714388}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.8690796, y: -6.47597, z: -0.08698038}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &477714390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477714388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da94c3ff92fe484f9acf6bb180a4e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &487438804
 PrefabInstance:
   m_ObjectHideFlags: 0
