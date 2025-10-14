@@ -10,17 +10,26 @@ public class CharacterPrefab
     public CharacterNames characterName;
     public GameObject prefab;
 }
+
+public class LevelPrefab
+{
+    public int levelIndex;
+    public GameObject prefab;
+}
 public class GameplayManager : MonoBehaviour
 {
+
+    [SerializeField]
+    List<CharacterPrefab> characterPrefabs;
+
+    [SerializeField]
+    List<LevelPrefab> levelPrefabs;
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+     
 }
