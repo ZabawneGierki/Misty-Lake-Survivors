@@ -8,11 +8,13 @@ public class CameraAutoFollow : MonoBehaviour
     public float searchInterval = 0.5f;     // how often to look
 
     CinemachineVirtualCamera vcam;
+    CinemachineConfiner2D confiner;
     float timer;
 
     void Awake()
     {
         vcam = GetComponent<CinemachineVirtualCamera>();
+        confiner = GetComponent<CinemachineConfiner2D>();
     }
 
     void Update()
@@ -32,5 +34,7 @@ public class CameraAutoFollow : MonoBehaviour
                 vcam.Follow = player.transform;
             }
         }
+
+
     }
 }
