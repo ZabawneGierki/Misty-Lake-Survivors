@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[System.Serializable]
+
+public class CharacterPrefab
+{
+    public CharacterNames characterName;
+    public GameObject prefab;
+}
 public class GameplayManager : MonoBehaviour
 {
     // Start is called before the first frame update
