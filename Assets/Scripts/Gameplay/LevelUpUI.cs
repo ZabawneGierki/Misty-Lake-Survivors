@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;    
@@ -21,12 +22,17 @@ public class LevelUpUI : MonoBehaviour
 
     PlayerInventory inventory;
     int choicesToShow = 3;
+     
 
     void Start()
     {
         inventory = FindObjectOfType<PlayerInventory>();
         panel.SetActive(false);
+        
+        
     }
+
+     
 
     public void ShowChoices()
     {

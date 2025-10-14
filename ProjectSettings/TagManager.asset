@@ -10,6 +10,7 @@ TagManager:
   - ScreenEdge
   - Pickup
   - Magnet
+  - LevelGrid
   layers:
   - Default
   - TransparentFX
