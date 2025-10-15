@@ -19,10 +19,13 @@ public class  Screen
 public class ScreenManager : MonoBehaviour
 {
     private static ScreenManager instance;
+
+    public Screen currentScreen;
     public static ScreenManager Instance { get { return instance; } }
     [SerializeField] List<Screen> screens;
 
-    
+    public Stack<ScreenName> screenHistory = new Stack<ScreenName>();
+
 
     private void Awake()
     {
@@ -36,6 +39,7 @@ public class ScreenManager : MonoBehaviour
             if (screen.screenName == screenName)
             {
                 screen.screenRef.SetActive(true);
+                screenHistory.Push(screenName);
             }
             else
             {
