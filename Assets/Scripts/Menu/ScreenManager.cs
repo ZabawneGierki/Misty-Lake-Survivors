@@ -37,18 +37,23 @@ public class ScreenManager : MonoBehaviour
 
     public void ShowScreen(ScreenName screenName)
     {
-        foreach (var screen in screens)
+
+        if (currentScreen != null)
         {
-            if (screen.screenName == screenName)
-            {
-                screen.screenRef.SetActive(true);
-                 
-            }
-            else
-            {
-                screen.screenRef.SetActive(false);
-            }
+            currentScreen.screenRef.SetActive(false);
+            screenHistory.Push(currentScreen.screenName);
         }
+        Screen screenToShow = screens.Find(s => s.screenName == screenName);
+        if (screenToShow != null)
+        {
+            screenToShow.screenRef.SetActive(true);
+            currentScreen = screenToShow;
+        }
+        else
+        {
+            Debug.LogError("Screen not found: " + screenName);
+        }
+
     }
 
     public void GoBack()
