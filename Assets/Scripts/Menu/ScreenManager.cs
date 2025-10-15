@@ -32,6 +32,9 @@ public class ScreenManager : MonoBehaviour
         instance = this;
     }
 
+
+     
+
     public void ShowScreen(ScreenName screenName)
     {
         foreach (var screen in screens)
@@ -39,12 +42,17 @@ public class ScreenManager : MonoBehaviour
             if (screen.screenName == screenName)
             {
                 screen.screenRef.SetActive(true);
-                screenHistory.Push(screenName);
+                 
             }
             else
             {
                 screen.screenRef.SetActive(false);
             }
         }
+    }
+
+    public void GoBack()
+    {
+         
     }
 }
