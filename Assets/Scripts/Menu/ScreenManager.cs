@@ -33,7 +33,10 @@ public class ScreenManager : MonoBehaviour
     }
 
 
-     
+    private void Start()
+    {
+       currentScreen = screens.Find(s => s.screenName == ScreenName.MainMenu);
+    }
 
     public void ShowScreen(ScreenName screenName)
     {
