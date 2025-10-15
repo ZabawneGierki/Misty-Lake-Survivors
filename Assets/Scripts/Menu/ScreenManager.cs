@@ -7,7 +7,7 @@ public enum ScreenName
 {
     MainMenu,
     Settings,
-    SelectionScreen,
+    CharacternlvlSelection,
 
 }
 [System.Serializable]
@@ -18,15 +18,12 @@ public class  Screen
 }
 public class ScreenManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private static ScreenManager instance;
+    public static ScreenManager Instance { get { return instance; } }
+    [SerializeField] List<Screen> screens;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        instance = this;
     }
 }
