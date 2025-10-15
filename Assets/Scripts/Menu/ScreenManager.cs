@@ -22,6 +22,13 @@ public class ScreenManager : MonoBehaviour
     public static ScreenManager Instance { get { return instance; } }
     [SerializeField] List<Screen> screens;
 
+    
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public void ShowScreen(ScreenName screenName)
     {
         foreach (var screen in screens)
@@ -35,10 +42,5 @@ public class ScreenManager : MonoBehaviour
                 screen.screenRef.SetActive(false);
             }
         }
-    }
-
-    private void Awake()
-    {
-        instance = this;
     }
 }
