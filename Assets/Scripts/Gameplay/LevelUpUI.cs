@@ -34,7 +34,7 @@ public class LevelUpUI : MonoBehaviour
 
      
 
-    public void ShowChoices()
+    public void ShowChoices(int lvl)
     {
         panel.SetActive(true);
         Time.timeScale = 0f;

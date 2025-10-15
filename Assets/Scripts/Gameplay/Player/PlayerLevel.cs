@@ -13,6 +13,13 @@ public class PlayerLevel : MonoBehaviour
 
 
 
+    private void Awake()
+    {
+         LevelUpUI levelUpUI = FindObjectOfType<LevelUpUI>();
+        Debug.Log("LevelUpUI found: " + (levelUpUI != null));
+        OnLevelUp.AddListener(levelUpUI.ShowChoices);
+    }
+
     void OnDestroy()
     {
         // Clean up the static event when the player is destroyed
@@ -35,7 +42,9 @@ public class PlayerLevel : MonoBehaviour
         // You can make the XP curve scale
         xpToNextLevel = Mathf.RoundToInt(xpToNextLevel * 1.2f);
 
-        OnLevelUp?.Invoke(level);
+         
+
+            OnLevelUp?.Invoke(level);
     }
 
     public float GetXPPercent()
