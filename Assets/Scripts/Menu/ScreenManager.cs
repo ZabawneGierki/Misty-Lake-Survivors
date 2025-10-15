@@ -2,6 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum ScreenName
+{
+    MainMenu,
+    Settings,
+    SelectionScreen,
+
+}
+[System.Serializable]
+public class  Screen
+{
+    GameObject screenRef;
+    ScreenName screenName;
+}
 public class ScreenManager : MonoBehaviour
 {
     // Start is called before the first frame update
