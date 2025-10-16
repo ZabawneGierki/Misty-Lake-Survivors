@@ -80,4 +80,9 @@ public class ScreenManager : MonoBehaviour
             Debug.Log("No previous screen in history.");
         }
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
