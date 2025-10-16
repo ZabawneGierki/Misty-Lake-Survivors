@@ -1147,7 +1147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8262506223862062967, guid: 9f82a039915b4fe41ad2f8ef2075420f, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: Upgrades
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
