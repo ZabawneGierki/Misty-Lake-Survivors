@@ -59,8 +59,22 @@ public class ScreenManager : MonoBehaviour
 
     }
 
+    // Metody pomocnicze bez parametrów
+    public void ShowMainMenu() => ShowScreen(ScreenName.MainMenu);
+    public void ShowSettings() => ShowScreen(ScreenName.Settings);
+    public void ShowCharacterSelection() => ShowScreen(ScreenName.CharacternlvlSelection);
+
     public void GoBack()
     {
          
+        if (screenHistory.Count > 0)
+        {
+            ScreenName previousScreen = screenHistory.Pop();
+            ShowScreen(previousScreen);
+        }
+        else
+        {
+            Debug.Log("No previous screen in history.");
+        }
     }
 }
