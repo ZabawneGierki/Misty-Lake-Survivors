@@ -8,6 +8,7 @@ public enum ScreenName
     MainMenu,
     Settings,
     CharacternlvlSelection,
+    UpgradeMenu,
 
 }
 [System.Serializable]
@@ -63,6 +64,8 @@ public class ScreenManager : MonoBehaviour
     public void ShowMainMenu() => ShowScreen(ScreenName.MainMenu);
     public void ShowSettings() => ShowScreen(ScreenName.Settings);
     public void ShowCharacterSelection() => ShowScreen(ScreenName.CharacternlvlSelection);
+
+    public void ShowUpgradeMenu() => ShowScreen(ScreenName.UpgradeMenu);
 
     public void GoBack()
     {
