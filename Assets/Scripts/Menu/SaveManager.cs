@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -23,23 +24,36 @@ public class PermanentUpgrade
 public   class SaveManager: MonoBehaviour
 {
 
-      private string saveFilePath = Application.persistentDataPath + "/upgrades.json";
+    public static string saveFilePath;
+
+    public List<PermanentUpgrade> permanentUpgrades = new List<PermanentUpgrade>(); 
 
 
     private void Awake()
     {
+        saveFilePath = Application.persistentDataPath + "/savefile.json";
         // create save file if it doesn't exist
         if (!System.IO.File.Exists(saveFilePath))
         {
             System.IO.File.WriteAllText(saveFilePath, "{}");
-            JsonUtility.ToJson(new PermanentUpgrade());
+
         }
+    }
+    private void Start()
+    {
+        
+        SavePermantUpgrade(new PermanentUpgrade { upgradeName = PermanentUpgradeName.MaxHealth, currentLevel = 1 });
+
+        Debug.Log("Save file path: " + saveFilePath);
+
 
 
     }
     public static void SavePermantUpgrade(PermanentUpgrade upgrade)
     {
+         JsonUtility.ToJson(upgrade);
          
+        System.IO.File.AppendAllText(saveFilePath, JsonUtility.ToJson(upgrade) + "\n");
     }
 
 
