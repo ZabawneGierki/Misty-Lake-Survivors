@@ -1,18 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public static class SaveManager 
+[System.Serializable]
+public enum PermanentUpgradeName
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    MaxHealth,
+    Damage,
+    Speed,
+    FireRate,
+    ShieldCapacity,
+    HealthRegen
+}
+public static class SaveManager
+{
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
