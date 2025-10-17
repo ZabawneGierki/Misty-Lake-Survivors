@@ -1,3 +1,5 @@
+using UnityEngine;
+
 [System.Serializable]
 public enum PermanentUpgradeName
 {
@@ -17,7 +19,22 @@ public class PermanentUpgrade
     public int currentLevel;
 
 }
-public static class SaveManager
+public   class SaveManager: MonoBehaviour
 {
+
+    static private string saveFilePath = Application.persistentDataPath + "/upgrades.json";
+
+
+    private void Awake()
+    {
+        // create save file if it doesn't exist
+
+
+    }
+    public static void SavePermantUpgrade(PermanentUpgrade upgrade)
+    {
+         
+    }
+
 
 }
