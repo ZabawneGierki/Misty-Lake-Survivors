@@ -8,6 +8,14 @@ public enum PermanentUpgradeName
     ShieldCapacity,
     HealthRegen
 }
+
+[System.Serializable]
+
+public class PermanentUpgrade
+{
+    public PermanentUpgradeName upgradeName;
+     
+}
 public static class SaveManager
 {
 
