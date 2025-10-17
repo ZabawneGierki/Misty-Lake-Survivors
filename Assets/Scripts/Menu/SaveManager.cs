@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 [System.Serializable]
 public enum PermanentUpgradeName
 {
@@ -31,6 +32,7 @@ public   class SaveManager: MonoBehaviour
         if (!System.IO.File.Exists(saveFilePath))
         {
             System.IO.File.WriteAllText(saveFilePath, "{}");
+            JsonUtility.ToJson(new PermanentUpgrade());
         }
 
 
