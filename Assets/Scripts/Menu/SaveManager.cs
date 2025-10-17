@@ -52,7 +52,11 @@ public   class SaveManager: MonoBehaviour
     public static void SavePermantUpgrade(PermanentUpgrade upgrade)
     {
          JsonUtility.ToJson(upgrade);
-         
+
+        //check if upgrade already exists in file
+
+
+
         System.IO.File.AppendAllText(saveFilePath, JsonUtility.ToJson(upgrade) + "\n");
     }
 
