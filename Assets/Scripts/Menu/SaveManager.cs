@@ -14,7 +14,8 @@ public enum PermanentUpgradeName
 public class PermanentUpgrade
 {
     public PermanentUpgradeName upgradeName;
-     
+    public int currentLevel;
+
 }
 public static class SaveManager
 {
