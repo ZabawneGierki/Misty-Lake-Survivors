@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using System.Collections;
 
 
 [System.Serializable]
@@ -54,6 +56,19 @@ public   class SaveManager: MonoBehaviour
          JsonUtility.ToJson(upgrade);
 
         //check if upgrade already exists in file
+        PermanentUpgrade[] existingUpgrades = System.IO.File.ReadAllLines(saveFilePath)
+            .Select(line => JsonUtility.FromJson<PermanentUpgrade>(line))
+            .Where(u => u.upgradeName == upgrade.upgradeName)
+            .ToArray();
+        if (existingUpgrades.Length > 0)
+        {
+             foreach (var existingUpgrade in existingUpgrades)
+            {
+                
+            }
+
+        }
+
 
 
 
