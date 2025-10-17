@@ -22,12 +22,16 @@ public class PermanentUpgrade
 public   class SaveManager: MonoBehaviour
 {
 
-    static private string saveFilePath = Application.persistentDataPath + "/upgrades.json";
+      private string saveFilePath = Application.persistentDataPath + "/upgrades.json";
 
 
     private void Awake()
     {
         // create save file if it doesn't exist
+        if (!System.IO.File.Exists(saveFilePath))
+        {
+            System.IO.File.WriteAllText(saveFilePath, "{}");
+        }
 
 
     }
