@@ -44,7 +44,7 @@ public   class SaveManager: MonoBehaviour
     private void Start()
     {
         
-        SavePermantUpgrade(new PermanentUpgrade { upgradeName = PermanentUpgradeName.MaxHealth, currentLevel = 1 });
+        
 
         Debug.Log("Save file path: " + saveFilePath);
 
@@ -53,26 +53,8 @@ public   class SaveManager: MonoBehaviour
     }
     public static void SavePermantUpgrade(PermanentUpgrade upgrade)
     {
-         JsonUtility.ToJson(upgrade);
-
-        //check if upgrade already exists in file
-        PermanentUpgrade[] existingUpgrades = System.IO.File.ReadAllLines(saveFilePath)
-            .Select(line => JsonUtility.FromJson<PermanentUpgrade>(line))
-            .Where(u => u.upgradeName == upgrade.upgradeName)
-            .ToArray();
-        if (existingUpgrades.Length > 0)
-        {
-             foreach (var existingUpgrade in existingUpgrades)
-            {
-                
-            }
-
-        }
-
-
-
-
-        System.IO.File.AppendAllText(saveFilePath, JsonUtility.ToJson(upgrade) + "\n");
+        
+       
     }
 
 
