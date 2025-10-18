@@ -19,11 +19,34 @@ public class LanguageSwitcher : MonoBehaviour
         prevButton.onClick.AddListener(() => ChangeLanguage(-1));
         nextButton.onClick.AddListener(() => ChangeLanguage(1));
 
-        var selected = LocalizationSettings.SelectedLocale;
-        currentLocaleIndex = LocalizationSettings.AvailableLocales.Locales.IndexOf(selected);
-        UpdateLabel();
+        StartCoroutine(LoadLocale());
     }
 
+
+    private IEnumerator LoadLocale()
+    {
+        yield return LocalizationSettings.InitializationOperation;
+
+        var locales = LocalizationSettings.AvailableLocales.Locales;
+        var savedLocaleCode = PlayerPrefs.GetString(PlayerPrefsLocaleKey, string.Empty);
+
+        if (!string.IsNullOrEmpty(savedLocaleCode))
+        {
+            var savedLocale = locales.Find(locale => locale.Identifier.Code == savedLocaleCode);
+            if (savedLocale != null)
+            {
+                LocalizationSettings.SelectedLocale = savedLocale;
+                currentLocaleIndex = locales.IndexOf(savedLocale);
+            }
+        }
+        else
+        {
+            var selected = LocalizationSettings.SelectedLocale;
+            currentLocaleIndex = locales.IndexOf(selected);
+        }
+
+        UpdateLabel();
+    }
     private void ChangeLanguage(int direction)
     {
         if (isChanging) return;
@@ -39,6 +62,8 @@ public class LanguageSwitcher : MonoBehaviour
 
         yield return LocalizationSettings.InitializationOperation; // Wait for init
         LocalizationSettings.SelectedLocale = locales[currentLocaleIndex];
+        PlayerPrefs.SetString(PlayerPrefsLocaleKey, locales[currentLocaleIndex].Identifier.Code);
+
 
         UpdateLabel();
         isChanging = false;
