@@ -10,6 +10,7 @@ public class LanguageSwitcher : MonoBehaviour
     [SerializeField] private Button nextButton;
     [SerializeField] private TMP_Text languageLabel;
 
+    private const string PlayerPrefsLocaleKey = "selected_locale";
     private int currentLocaleIndex = 0;
     private bool isChanging = false;
 
