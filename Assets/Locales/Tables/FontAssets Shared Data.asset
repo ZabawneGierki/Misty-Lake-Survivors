@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: main_font
     m_Metadata:
       m_Items: []
+  - m_Id: 418560866783232
+    m_Key: flag_icon
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 1027135616628293633
