@@ -1,27 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using UnityEngine.Localization.Settings;
+using UnityEngine.Localization;
 using System.Collections;
 
 public class LanguageSwitcher : MonoBehaviour
 {
     [SerializeField] private Button prevButton;
     [SerializeField] private Button nextButton;
-    [SerializeField] private TMP_Text languageLabel;
+    [SerializeField] private Image flagImage;
 
-    private const string PlayerPrefsLocaleKey = "selected_locale";
     private int currentLocaleIndex = 0;
     private bool isChanging = false;
+
+    private LocalizedAsset<Sprite> localizedFlag;
+    private const string PlayerPrefsLocaleKey = "selected_locale";
 
     private void Start()
     {
         prevButton.onClick.AddListener(() => ChangeLanguage(-1));
         nextButton.onClick.AddListener(() => ChangeLanguage(1));
-
         StartCoroutine(LoadLocale());
     }
-
 
     private IEnumerator LoadLocale()
     {
@@ -45,8 +45,9 @@ public class LanguageSwitcher : MonoBehaviour
             currentLocaleIndex = locales.IndexOf(selected);
         }
 
-        UpdateLabel();
+        yield return UpdateFlag();
     }
+
     private void ChangeLanguage(int direction)
     {
         if (isChanging) return;
@@ -60,18 +61,25 @@ public class LanguageSwitcher : MonoBehaviour
         var locales = LocalizationSettings.AvailableLocales.Locales;
         currentLocaleIndex = (currentLocaleIndex + direction + locales.Count) % locales.Count;
 
-        yield return LocalizationSettings.InitializationOperation; // Wait for init
+        yield return LocalizationSettings.InitializationOperation;
         LocalizationSettings.SelectedLocale = locales[currentLocaleIndex];
         PlayerPrefs.SetString(PlayerPrefsLocaleKey, locales[currentLocaleIndex].Identifier.Code);
 
-
-        UpdateLabel();
+        yield return UpdateFlag();
         isChanging = false;
     }
 
-    private void UpdateLabel()
+    private IEnumerator UpdateFlag()
     {
-        var currentLocale = LocalizationSettings.AvailableLocales.Locales[currentLocaleIndex];
-        languageLabel.text = currentLocale.Identifier.CultureInfo.NativeName;
+        localizedFlag = new LocalizedAsset<Sprite>();
+        localizedFlag.TableReference = "FontAssets";
+        localizedFlag.TableEntryReference = "flag_icon";
+        using var _ = localizedFlag;
+        var handle = localizedFlag.LoadAssetAsync();
+        yield return handle;
+
+        if (handle.Result != null)
+            flagImage.sprite = handle.Result;
     }
 }
+
