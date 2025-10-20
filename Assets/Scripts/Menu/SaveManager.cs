@@ -1,61 +1,49 @@
+using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using UnityEngine;
-using System.Collections;
-
 
 [System.Serializable]
-public enum PermanentUpgradeName
+public class SaveData
 {
-    MaxHealth,
-    Damage,
-    Speed,
-    FireRate,
-    ShieldCapacity,
-    HealthRegen
+    public int coins;
+    public Tuple<string, int> unlockedUpgrades = new("", 0); 
+    public List<CharacterName> unlockedCharacters = new();
 }
 
-[System.Serializable]
-
-public class PermanentUpgrade
+public enum CharacterName
 {
-    public PermanentUpgradeName upgradeName;
-    public int currentLevel;
+    Reimu,
+    Marisa,
+    Daiyousei,
+    Remilia,
+    Cirno,
+    Flandre
 
 }
-public   class SaveManager: MonoBehaviour
+public static class SaveManager
 {
+    private static string path = Application.persistentDataPath + "/save.json";
 
-    public static string saveFilePath;
-
-    public List<PermanentUpgrade> permanentUpgrades = new List<PermanentUpgrade>(); 
-
-
-    private void Awake()
+    public static void Save(SaveData data)
     {
-        saveFilePath = Application.persistentDataPath + "/savefile.json";
-        // create save file if it doesn't exist
-        if (!System.IO.File.Exists(saveFilePath))
-        {
-            System.IO.File.WriteAllText(saveFilePath, "{}");
-
-        }
-    }
-    private void Start()
-    {
-        
-        
-
-        Debug.Log("Save file path: " + saveFilePath);
-
-
-
-    }
-    public static void SavePermantUpgrade(PermanentUpgrade upgrade)
-    {
-        
-       
+        string json = JsonUtility.ToJson(data, true);
+        File.WriteAllText(path, json);
     }
 
+    public static SaveData Load()
+    {
+        if (!File.Exists(path))
+            return new SaveData(); // returns new blank save if none found
 
+        string json = File.ReadAllText(path);
+        return JsonUtility.FromJson<SaveData>(json);
+    }
+
+    public static void ResetSave()
+    {
+        if (File.Exists(path))
+            File.Delete(path);
+    }
 }
+
