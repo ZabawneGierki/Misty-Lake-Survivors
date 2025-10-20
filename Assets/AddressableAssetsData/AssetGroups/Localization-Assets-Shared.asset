@@ -29,6 +29,16 @@ MonoBehaviour:
     - Locale-en
     - Locale-pl-PL
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7f27888186938c48a39e21afff78a36
+    m_Address: flags
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ja
+    - Locale-ko
+    - Locale-pl-PL
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 839d98836fc641f42a657e9c3f187db1, type: 2}
   m_SchemaSet:

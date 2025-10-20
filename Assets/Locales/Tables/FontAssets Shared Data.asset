@@ -26,6 +26,7 @@ MonoBehaviour:
   m_Metadata:
     m_Items:
     - rid: 1027135616628293633
+    - rid: 1027135642831683584
   m_KeyGenerator:
     rid: 1027135616628293632
   references:
@@ -48,3 +49,16 @@ MonoBehaviour:
           - pl-PL
         m_TypeString: TMPro.TMP_FontAsset, Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral,
           PublicKeyToken=null
+    - rid: 1027135642831683584
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 418560866783232
+          m_TableCodes:
+          - zh
+          - en
+          - ja
+          - ko
+          - pl-PL
+        m_TypeString: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
