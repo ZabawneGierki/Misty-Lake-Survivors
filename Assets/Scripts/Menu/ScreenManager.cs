@@ -78,6 +78,7 @@ public class ScreenManager : MonoBehaviour
         else
         {
             Debug.Log("No previous screen in history.");
+            
         }
     }
 
