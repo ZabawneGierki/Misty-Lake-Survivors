@@ -9,5 +9,8 @@ public class CharacterButton : MonoBehaviour
      
     public TextMeshProUGUI CharacterNameText;
     public Image CharacterSprite;
+    public Toggle Toggle;
+
+    public CharacterNames characterName;
 
 }

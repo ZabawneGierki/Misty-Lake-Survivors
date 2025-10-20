@@ -32,7 +32,8 @@ public class CharacterButtonLoader : MonoBehaviour
             //button.transform.Find("Name").GetComponentInChildren<TextMeshProUGUI>().text = character.fullName;
             //button.transform.Find("Icon").GetComponent<Image>().sprite = character.characterPortrait;
             
-            Toggle toggle = button.GetComponentInChildren<Toggle>();
+            //Toggle toggle = button.GetComponentInChildren<Toggle>();
+            Toggle toggle = characterButton.Toggle;
             toggle.onValueChanged.AddListener((isOn) => { if (isOn) OnClick(character.name); });
             toggle.group = buttonContainer.GetComponent<ToggleGroup>();
             toggle.isOn = isFirst; // Set only the first toggle to be on
