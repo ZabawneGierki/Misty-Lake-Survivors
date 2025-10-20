@@ -11,6 +11,15 @@ public class CharacterButton : MonoBehaviour
     public Image CharacterSprite;
     public Toggle Toggle;
 
+    private CharacterData characterData;
+
     public CharacterNames characterName;
+
+
+
+    public void Init (CharacterData cd)
+    {
+        
+    }
 
 }
