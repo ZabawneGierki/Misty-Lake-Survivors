@@ -26,8 +26,11 @@ public class CharacterButtonLoader : MonoBehaviour
             GameObject button = Instantiate(characterButtonPrefab, buttonContainer);
 
             // Set button data here
-            button.transform.Find("Name").GetComponentInChildren<TextMeshProUGUI>().text = character.fullName;
-            button.transform.Find("Icon").GetComponent<Image>().sprite = character.characterPortrait;
+            CharacterButton characterButton = button.GetComponent<CharacterButton>();
+            characterButton.CharacterNameText.text = character.fullName;
+            characterButton.CharacterSprite.sprite = character.characterPortrait;
+            //button.transform.Find("Name").GetComponentInChildren<TextMeshProUGUI>().text = character.fullName;
+            //button.transform.Find("Icon").GetComponent<Image>().sprite = character.characterPortrait;
             
             Toggle toggle = button.GetComponentInChildren<Toggle>();
             toggle.onValueChanged.AddListener((isOn) => { if (isOn) OnClick(character.name); });
