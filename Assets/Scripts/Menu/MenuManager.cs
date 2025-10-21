@@ -22,6 +22,17 @@ public class MenuManager : MonoBehaviour
         SaveManager.Save(saveData);
     }
 
+    public bool SpendCoins(int amount)
+    {
+        if (saveData.coins >= amount)
+        {
+            saveData.coins -= amount;
+            SaveManager.Save(saveData);
+            return true;
+        }
+        return false;
+    }
+
     public void UnlockCharacter(CharacterNames character)
     {
         if (!saveData.unlockedCharacters.Contains(character))
@@ -46,4 +57,6 @@ public class MenuManager : MonoBehaviour
         SaveManager.ResetSave();
         saveData = new SaveData();
     }
+
+ 
 }

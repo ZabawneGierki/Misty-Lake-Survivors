@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Runtime.ConstrainedExecution;
 public class CharacterButton : MonoBehaviour
 {
     [Header("public references")]
@@ -19,7 +20,7 @@ public class CharacterButton : MonoBehaviour
 
     public CharacterNames characterName;
 
-
+    private const int characterUnlockPrice = 200;
 
     public void Init (CharacterData cd)
     {
