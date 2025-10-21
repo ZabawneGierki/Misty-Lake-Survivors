@@ -15,6 +15,27 @@ public class MenuManager : MonoBehaviour
         LoadGame();
     }
 
+
+    public void AddCoins(int amount)
+    {
+        saveData.coins += amount;
+        SaveManager.Save(saveData);
+    }
+
+    public void UnlockCharacter(CharacterNames character)
+    {
+        if (!saveData.unlockedCharacters.Contains(character))
+        {
+            saveData.unlockedCharacters.Add(character);
+            SaveManager.Save(saveData);
+        }
+    }
+
+
+    public bool IsCharacterUnlocked(CharacterNames character)
+    {
+        return saveData.unlockedCharacters.Contains(character);
+    }
     void LoadGame()
     {
         saveData = SaveManager.Load();

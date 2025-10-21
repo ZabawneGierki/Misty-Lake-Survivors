@@ -317,6 +317,10 @@ MonoBehaviour:
   CharacterNameText: {fileID: 1296180232469586239}
   CharacterSprite: {fileID: 5030883516535169614}
   Toggle: {fileID: 2534154530445332558}
+  priceTag: {fileID: 6584431758708889680}
+  lockScreen: {fileID: 1040047560742740168}
+  button: {fileID: 5514889948082318611}
+  characterName: 0
 --- !u!1001 &6505404843659191842
 PrefabInstance:
   m_ObjectHideFlags: 0

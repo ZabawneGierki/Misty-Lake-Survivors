@@ -10,6 +10,9 @@ public class CharacterButton : MonoBehaviour
     public TextMeshProUGUI CharacterNameText;
     public Image CharacterSprite;
     public Toggle Toggle;
+    public TextMeshProUGUI priceTag;
+    public Image lockScreen;
+    public Button button;
 
     private CharacterData characterData;
 
@@ -24,6 +27,22 @@ public class CharacterButton : MonoBehaviour
         CharacterSprite.sprite = characterData.characterPortrait;
 
         // check if character is unlocked 
+        if (MenuManager.instance.IsCharacterUnlocked(characterData.name))
+        {
+            Toggle.isOn = true;
+            Toggle.interactable = true;
+        }
+        else
+        {
+            Toggle.isOn = false;
+            Toggle.interactable = false;
+        }
+
+    }
+
+
+    private void Unlock()
+    {
 
     }
 

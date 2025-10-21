@@ -44,6 +44,7 @@ public static class SaveManager
         return JsonUtility.FromJson<SaveData>(json);
     }
 
+   
     public static void ResetSave()
     {
         if (File.Exists(path))
