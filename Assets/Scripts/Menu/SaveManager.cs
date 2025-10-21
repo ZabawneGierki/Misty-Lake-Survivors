@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
+
+
 [System.Serializable]
+public class UpgradeData
+{
+    public string upgradeName;
+    public int level;
+}
+[Serializable]
 public class SaveData
 {
     public int coins;
-    public Tuple<string, int> unlockedUpgrades = new("", 0); 
+    public Tuple<string, int> unlockedUpgrades = null; 
     public List<CharacterNames> unlockedCharacters = new();
 }
 
