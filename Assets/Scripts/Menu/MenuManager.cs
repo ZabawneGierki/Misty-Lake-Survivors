@@ -12,16 +12,17 @@ public class MenuManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        LoadGame();
     }
 
-    // Update is called once per frame
-    void Update()
+    void LoadGame()
     {
-        
+        saveData = SaveManager.Load();
+    }
+
+    public void ResetProgress()
+    {
+        SaveManager.ResetSave();
+        saveData = new SaveData();
     }
 }
