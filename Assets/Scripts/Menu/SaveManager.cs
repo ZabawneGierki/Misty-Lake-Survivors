@@ -8,19 +8,10 @@ public class SaveData
 {
     public int coins;
     public Tuple<string, int> unlockedUpgrades = new("", 0); 
-    public List<CharacterName> unlockedCharacters = new();
+    public List<CharacterNames> unlockedCharacters = new();
 }
 
-public enum CharacterName
-{
-    Reimu,
-    Marisa,
-    Daiyousei,
-    Remilia,
-    Cirno,
-    Flandre
 
-}
 public static class SaveManager
 {
     private static string path = Application.persistentDataPath + "/save.json";
@@ -34,7 +25,12 @@ public static class SaveManager
     public static SaveData Load()
     {
         if (!File.Exists(path))
-            return new SaveData(); // returns new blank save if none found
+        {
+            var newSave = new SaveData();
+            newSave.unlockedCharacters.Add(CharacterNames.Reimu);  // add Reimu at the start.
+            Save(newSave); // optional: create file right away
+            return newSave;
+        }
 
         string json = File.ReadAllText(path);
         return JsonUtility.FromJson<SaveData>(json);
