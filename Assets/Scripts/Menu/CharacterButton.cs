@@ -10,6 +10,7 @@ public class CharacterButton : MonoBehaviour
     public TextMeshProUGUI CharacterNameText;
     public Image CharacterSprite;
     public Toggle Toggle;
+
     public TextMeshProUGUI priceTag;
     public Image lockScreen;
     public Button button;
@@ -26,11 +27,20 @@ public class CharacterButton : MonoBehaviour
         CharacterNameText.text = characterData.fullName;
         CharacterSprite.sprite = characterData.characterPortrait;
 
+
+        button.onClick.AddListener(() => 
+        { 
+            MenuManager.instance.UnlockCharacter(characterData.name);
+            Toggle.interactable = true;
+            Unlock();
+        });
+
         // check if character is unlocked 
         if (MenuManager.instance.IsCharacterUnlocked(characterData.name))
         {
-            Toggle.isOn = true;
+            
             Toggle.interactable = true;
+            Unlock();
         }
         else
         {
@@ -43,7 +53,13 @@ public class CharacterButton : MonoBehaviour
 
     private void Unlock()
     {
+        priceTag.gameObject.SetActive(false);
+        lockScreen.gameObject.SetActive(false);
+         
 
     }
+
+
+   
 
 }
