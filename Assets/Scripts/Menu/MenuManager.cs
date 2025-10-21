@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class MenuManager : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class MenuManager : MonoBehaviour
     public SaveData saveData;
 
 
+    // handling a toast message.
+    [SerializeField] private CanvasGroup toastMessage;
+
     private void Awake()
     {
         instance = this;
@@ -16,6 +20,11 @@ public class MenuManager : MonoBehaviour
     }
 
 
+    private void Start()
+    {
+        toastMessage.alpha = 0f;
+         
+    }
     public void AddCoins(int amount)
     {
         saveData.coins += amount;
@@ -58,5 +67,19 @@ public class MenuManager : MonoBehaviour
         saveData = new SaveData();
     }
 
- 
+
+
+    public void ShowToastMessage(string message, float duration = 0.5f)
+    {
+        toastMessage.enabled = true;
+        toastMessage.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = message;
+        toastMessage.DOFade(1f, 0.5f).OnComplete(() =>
+        {
+            DOVirtual.DelayedCall(duration, () =>
+            {
+                toastMessage.DOFade(0f, 0.5f);
+            });
+        });
+    }
+
 }

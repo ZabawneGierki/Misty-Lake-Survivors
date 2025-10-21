@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
-using System.Runtime.ConstrainedExecution;
 public class CharacterButton : MonoBehaviour
 {
     [Header("public references")]
-     
+
     public TextMeshProUGUI CharacterNameText;
     public Image CharacterSprite;
     public Toggle Toggle;
@@ -22,24 +19,35 @@ public class CharacterButton : MonoBehaviour
 
     private const int characterUnlockPrice = 200;
 
-    public void Init (CharacterData cd)
+    public void Init(CharacterData cd)
     {
         characterData = cd;
         CharacterNameText.text = characterData.fullName;
         CharacterSprite.sprite = characterData.characterPortrait;
 
 
-        button.onClick.AddListener(() => 
-        { 
-            MenuManager.instance.UnlockCharacter(characterData.name);
-            Toggle.interactable = true;
-            Unlock();
+        button.onClick.AddListener(() =>
+        {
+            if (MenuManager.instance.SpendCoins(characterUnlockPrice))
+            {
+                MenuManager.instance.UnlockCharacter(characterData.name);
+                Toggle.interactable = true;
+                Unlock();
+                MenuManager.instance.ShowToastMessage(characterData.fullName + " unlocked!");
+            }
+            else
+            {
+                Debug.Log("Not enough coins to unlock " + characterData.fullName);
+                MenuManager.instance.ShowToastMessage("Not enough coins to unlock " + characterData.fullName);
+                 
+            }
+
         });
 
         // check if character is unlocked 
         if (MenuManager.instance.IsCharacterUnlocked(characterData.name))
         {
-            
+
             Toggle.interactable = true;
             Unlock();
         }
@@ -56,11 +64,11 @@ public class CharacterButton : MonoBehaviour
     {
         priceTag.gameObject.SetActive(false);
         lockScreen.gameObject.SetActive(false);
-         
+
 
     }
 
 
-   
+
 
 }
