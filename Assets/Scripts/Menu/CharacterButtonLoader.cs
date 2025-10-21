@@ -27,12 +27,10 @@ public class CharacterButtonLoader : MonoBehaviour
 
             // Set button data here
             CharacterButton characterButton = button.GetComponent<CharacterButton>();
-            characterButton.CharacterNameText.text = character.fullName;
-            characterButton.CharacterSprite.sprite = character.characterPortrait;
-            //button.transform.Find("Name").GetComponentInChildren<TextMeshProUGUI>().text = character.fullName;
-            //button.transform.Find("Icon").GetComponent<Image>().sprite = character.characterPortrait;
-            
-            //Toggle toggle = button.GetComponentInChildren<Toggle>();
+            characterButton.Init(character);
+            //characterButton.CharacterNameText.text = character.fullName;
+            //characterButton.CharacterSprite.sprite = character.characterPortrait;
+             
             Toggle toggle = characterButton.Toggle;
             toggle.onValueChanged.AddListener((isOn) => { if (isOn) OnClick(character.name); });
             toggle.group = buttonContainer.GetComponent<ToggleGroup>();

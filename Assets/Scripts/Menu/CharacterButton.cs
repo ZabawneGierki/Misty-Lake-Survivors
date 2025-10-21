@@ -19,7 +19,12 @@ public class CharacterButton : MonoBehaviour
 
     public void Init (CharacterData cd)
     {
-        
+        characterData = cd;
+        CharacterNameText.text = characterData.fullName;
+        CharacterSprite.sprite = characterData.characterPortrait;
+
+        // check if character is unlocked 
+
     }
 
 }

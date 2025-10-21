@@ -15,7 +15,7 @@ public class UpgradeData
 public class SaveData
 {
     public int coins;
-    public Tuple<string, int> unlockedUpgrades = null; 
+    public List<UpgradeData> upgrades = new();
     public List<CharacterNames> unlockedCharacters = new();
 }
 
