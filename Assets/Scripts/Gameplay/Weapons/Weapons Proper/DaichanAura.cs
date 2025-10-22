@@ -7,23 +7,22 @@ public class DaichanAura : WeaponBase
     public GameObject auraPrefab;
     private GameObject auraInstance;
     private AuraField auraField;
+    private float sizeIncrement = 0.5f;
 
     protected override void Fire()
     {
-        Debug.Log($"Firing Daichan Aura at {Time.timeSinceLevelLoad:F2} seconds");
         if (auraInstance == null)
         {
             // Spawn once, parent to player
             auraInstance = Instantiate(auraPrefab, transform.position, Quaternion.identity, transform);
             auraField = auraInstance.GetComponent<AuraField>();
-             
         }
 
-        // Update aura stats each fire call (damage, size, tick speed)
-        // random size for now
+        // Calculate size based on base size + (level-1 * increment)
+        float levelBasedSize = GetSize() + ((level - 1) * sizeIncrement);
         
-
-        auraField.UpdateStats(GetDamage(), GetSize());
+        // Update aura stats each fire call
+        auraField.UpdateStats(GetDamage(), levelBasedSize);
         auraField.DealDamage();
     }
 }

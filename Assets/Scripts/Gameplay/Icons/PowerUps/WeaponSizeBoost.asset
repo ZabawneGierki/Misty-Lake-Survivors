@@ -21,4 +21,4 @@ MonoBehaviour:
   - Expand dong 4
   - Expand dong 5
   maxLevel: 5
-  sizeBonusPerLevel: 0.5
+  sizeBonusPerLevel: 0.2

@@ -4,7 +4,7 @@ using UnityEngine;
 public class WeaponSizeBoost : PowerUpEffect
 {
     [Tooltip("Extra size per level, e.g. 0.1 = +10%")]
-    public float sizeBonusPerLevel = 0.4f;
+    public float sizeBonusPerLevel = 0.1f;
 
     public override void Apply(PlayerInventory inventory, int newLevel)
     {
