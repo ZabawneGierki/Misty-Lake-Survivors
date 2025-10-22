@@ -758,6 +758,14 @@ MonoBehaviour:
   characterPrefabs:
   - characterName: 3
     prefab: {fileID: 4968627227726519515, guid: 7feec5a73cdd8a644947dd664b6e6404, type: 3}
+  - characterName: 0
+    prefab: {fileID: 1946164539092929354, guid: b44b4b2edef262440ad0586b099a40f5, type: 3}
+  - characterName: 3
+    prefab: {fileID: 4968627227726519515, guid: 7feec5a73cdd8a644947dd664b6e6404, type: 3}
+  - characterName: 3
+    prefab: {fileID: 4968627227726519515, guid: 7feec5a73cdd8a644947dd664b6e6404, type: 3}
+  - characterName: 3
+    prefab: {fileID: 4968627227726519515, guid: 7feec5a73cdd8a644947dd664b6e6404, type: 3}
   levelPrefabs:
   - levelIndex: 0
     prefab: {fileID: 5278772439739624187, guid: e27386aecd93352489b17b7302ab82c2, type: 3}
@@ -877,11 +885,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 40
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 5.4639683
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
