@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Daiyousei's aura
   icon: {fileID: 21300000, guid: 1ee2662809a3ea049993b62d2dced211, type: 3}
-  description: This is the aura of daiyousei
+  descriptions:
+  - Adds an aura that damages enemies 1
+  - Increases the size 2
+  - Increases the size 3
+  - Increases the size 4
+  - Increases the size 5
   weaponPrefab: {fileID: 7668242088634815849, guid: b28584e3eabf6e04c94aa1e7bbf1318f, type: 3}
   maxLevel: 5

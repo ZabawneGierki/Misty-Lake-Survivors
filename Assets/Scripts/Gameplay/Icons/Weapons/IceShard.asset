@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Ice Shard
   icon: {fileID: 21300000, guid: 4369bef1a3214e34e936f001948fe15e, type: 3}
-  description: Fire an ice shard
+  descriptions:
+  - Shoot an ice shard that can bounce off screen! 1
+  - Descreases shoot interval 2
+  - Descreases shoot interval 3
+  - Descreases shoot interval 4
+  - Descreases shoot interval 5
   weaponPrefab: {fileID: 3434003037216650086, guid: f71d3731e7abe6b46a1926f8299c03a3, type: 3}
   maxLevel: 5

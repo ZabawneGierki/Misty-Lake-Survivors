@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
@@ -30,10 +30,19 @@ public class PlayerInventory : MonoBehaviour
     public bool AddWeapon(WeaponData data, Transform mount)
     {
         if (weapons.Count >= maxWeapons) return false;
+
         var slot = new WeaponSlot { data = data, level = 1 };
         GameObject inst = Instantiate(data.weaponPrefab, mount);
         slot.instance = inst;
         weapons.Add(slot);
+
+        // ✅ Apply all current power-up effects to the new weapon
+        foreach (var p in powerUps)
+        {
+            if (p.effect != null)
+                p.effect.Apply(this, p.level);
+        }
+
         return true;
     }
 

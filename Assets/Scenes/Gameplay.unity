@@ -3955,6 +3955,96 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
     amount: 20
     interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
+  - enemyPrefab: {fileID: 5810116554809720798, guid: 72e1e22450aee9b4884a69df5411b7d9, type: 3}
+    amount: 20
+    interval: 0.31
   spawnRadius: 10
 --- !u!4 &1959216032 stripped
 Transform:

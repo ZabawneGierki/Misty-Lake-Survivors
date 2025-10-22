@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
+ 
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;    
@@ -95,8 +95,8 @@ public class LevelUpUI : MonoBehaviour
 
             img.sprite = w.icon;
             nameTxt.text = w.weaponName;
-            descTxt.text = "Level " + nextLevel;
-            levelTxt.text = (existing != null ? $"Current Lv {existing.level}" : "New Weapon");
+            descTxt.text = w.GetDescription(nextLevel);//"Level " + nextLevel;
+            levelTxt.text = (existing != null ? $"Lvl {nextLevel}" : "New Weapon");
 
             btn.onClick.AddListener(() =>
             {
@@ -116,7 +116,7 @@ public class LevelUpUI : MonoBehaviour
             img.sprite = p.icon;
             nameTxt.text = p.powerName;
             descTxt.text = p.GetDescription(nextLevel);
-            levelTxt.text = existing != null ? $"Current Lv {existing.level}" : "New Power-Up";
+            levelTxt.text = existing != null ? $"Lvl {nextLevel}" : "New Power-Up";
 
             btn.onClick.AddListener(() =>
             {

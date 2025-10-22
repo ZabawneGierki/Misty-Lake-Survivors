@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891bf905b6dd6c24cac8313af3028103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 6
+  level: 1
   baseCooldown: 1
   baseDamage: 10
   baseProjectileSpeed: 15

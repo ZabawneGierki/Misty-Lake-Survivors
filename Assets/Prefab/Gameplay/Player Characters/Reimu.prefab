@@ -224,7 +224,7 @@ MonoBehaviour:
   maxPowerUps: 5
   weapons:
   - data: {fileID: 11400000, guid: a0075d381ee23e0478141cd6acb8c76e, type: 2}
-    level: 0
+    level: 1
     instance: {fileID: 6189817705702575418}
   powerUps: []
 --- !u!1 &4993655966760470212
@@ -436,7 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891bf905b6dd6c24cac8313af3028103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 6
+  level: 1
   baseCooldown: 1
   baseDamage: 10
   baseProjectileSpeed: 15
