@@ -5,7 +5,6 @@ using UnityEngine;
 
 
 [System.Serializable]
-
 public class UpgradeInfo
 {
     public string upgradeName;
@@ -21,7 +20,7 @@ public class UpgradesMenu : MonoBehaviour
     [SerializeField] private Transform upgradesMenuGrid;
     [SerializeField] private GameObject upgradeButtonPrefab;
 
-    public List<UpgradeData> availableUpgrades;
+    public List<UpgradeInfo> availableUpgrades;
 
 
 }
