@@ -52,8 +52,8 @@ public class UpgradeItemUI : MonoBehaviour
 
         MenuManager.instance.saveData.coins -= costPerLevel;
         currentLevel++;
-        GameManager.Instance.UpgradeLevel(upgradeName);
-        GameManager.Instance.SaveGame();
+        MenuManager.instance.UpgradeLevel(upgradeName);
+        MenuManager.instance.SaveGame();
 
         RefreshStars();
         RefreshButton();
