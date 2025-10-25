@@ -22,6 +22,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54dc2721688d73a42a21609d13136221
+    m_Address: Assets/Locales/Tables/Menu Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8f586378b4e144a9851e7b34d9b748ee
     m_Address: LiberationSans SDF
     m_ReadOnly: 1
